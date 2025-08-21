@@ -1,0 +1,289 @@
+/* Design System - Biophilic Color Palette and Typography */
+
+:root {
+  /* Primary Color Palette - Nature Inspired */
+  --color-sage-25: #f7f9f5;
+  --color-sage-50: #f0f4ed;
+  --color-sage-100: #e1e9db;
+  --color-sage-200: #c3d3b7;
+  --color-sage-300: #a5bd93;
+  --color-sage-400: #87a76f;
+  --color-sage-500: #87a96b;
+  --color-sage-600: #6d8755;
+  --color-sage-700: #53653f;
+  --color-sage-800: #39432a;
+  --color-sage-900: #1f2115;
+
+  --color-forest-25: #f4f6f4;
+  --color-forest-50: #e8ece8;
+  --color-forest-100: #d1d9d1;
+  --color-forest-200: #a3b3a3;
+  --color-forest-300: #758d75;
+  --color-forest-400: #476747;
+  --color-forest-500: #2d4a3e;
+  --color-forest-600: #243b32;
+  --color-forest-700: #1b2c25;
+  --color-forest-800: #121d19;
+  --color-forest-900: #090e0c;
+
+  --color-moss-25: #f6f9f3;
+  --color-moss-50: #edf3e7;
+  --color-moss-100: #dbe7cf;
+  --color-moss-200: #b7cf9f;
+  --color-moss-300: #93b76f;
+  --color-moss-400: #9bb068;
+  --color-moss-500: #7a8d52;
+  --color-moss-600: #626e42;
+  --color-moss-700: #495332;
+  --color-moss-800: #313822;
+  --color-moss-900: #181c11;
+
+  --color-earth-25: #f9f7f4;
+  --color-earth-50: #f3efe9;
+  --color-earth-100: #e7dfd3;
+  --color-earth-200: #cfbfa7;
+  --color-earth-300: #b79f7b;
+  --color-earth-400: #9f7f4f;
+  --color-earth-500: #8b7355;
+  --color-earth-600: #705c44;
+  --color-earth-700: #554533;
+  --color-earth-800: #3a2e22;
+  --color-earth-900: #1f1711;
+
+  --color-stone-25: #fafafa;
+  --color-stone-50: #f5f5f5;
+  --color-stone-100: #eeeeee;
+  --color-stone-200: #e0e0e0;
+  --color-stone-300: #c2c2c2;
+  --color-stone-400: #a8a8a8;
+  --color-stone-500: #8e8e8e;
+  --color-stone-600: #717171;
+  --color-stone-700: #545454;
+  --color-stone-800: #363636;
+  --color-stone-900: #191919;
+
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+  --font-size-4xl: 2.25rem;    /* 36px */
+  --font-size-5xl: 3rem;       /* 48px */
+  --font-size-6xl: 3.75rem;    /* 60px */
+  --font-size-7xl: 4.5rem;     /* 72px */
+
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Spacing Scale */
+  --space-px: 1px;
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;   /* 2px */
+  --radius-base: 0.25rem;  /* 4px */
+  --radius-md: 0.375rem;   /* 6px */
+  --radius-lg: 0.5rem;     /* 8px */
+  --radius-xl: 0.75rem;    /* 12px */
+  --radius-2xl: 1rem;      /* 16px */
+  --radius-3xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Biophilic Shadows - Nature inspired */
+  --shadow-organic: 0 4px 20px rgba(135, 169, 107, 0.15);
+  --shadow-leaf: 0 8px 30px rgba(45, 74, 62, 0.12);
+  --shadow-earth: 0 6px 24px rgba(139, 115, 85, 0.1);
+
+  /* Transition Timings */
+  --transition-fast: 150ms;
+  --transition-base: 200ms;
+  --transition-slow: 300ms;
+  --transition-slower: 500ms;
+
+  /* Easing Functions */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-organic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Dark Mode Variables */
+:root[data-theme="dark"] {
+  --color-sage-25: #1a1c17;
+  --color-sage-50: #24271f;
+  --color-sage-100: #2e3228;
+  --color-sage-200: #3c4234;
+  --color-sage-300: #4a5240;
+  --color-sage-400: #58624c;
+  --color-sage-500: #6d8755;
+  --color-sage-600: #87a96b;
+  --color-sage-700: #a5bd93;
+  --color-sage-800: #c3d3b7;
+  --color-sage-900: #e1e9db;
+
+  --color-forest-25: #0a0d0b;
+  --color-forest-50: #0e130f;
+  --color-forest-100: #141a15;
+  --color-forest-200: #1e251f;
+  --color-forest-300: #283029;
+  --color-forest-400: #323b33;
+  --color-forest-500: #476747;
+  --color-forest-600: #758d75;
+  --color-forest-700: #a3b3a3;
+  --color-forest-800: #d1d9d1;
+  --color-forest-900: #e8ece8;
+}
+
+/* Biophilic Design Elements */
+.organic-shape {
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  25% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  75% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+}
+
+.leaf-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top, rgba(135, 169, 107, 0.1) 0%, transparent 70%),
+              radial-gradient(ellipse at bottom, rgba(45, 74, 62, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.nature-gradient {
+  background: linear-gradient(135deg, 
+    var(--color-sage-100) 0%, 
+    var(--color-moss-100) 25%, 
+    var(--color-forest-100) 50%, 
+    var(--color-earth-100) 75%, 
+    var(--color-sage-100) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 50% 0%; }
+  75% { background-position: 50% 100%; }
+}
+
+.floating-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-particles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(135, 169, 107, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(45, 74, 62, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 10%, rgba(155, 176, 104, 0.06) 1.5px, transparent 1.5px);
+  background-size: 100px 100px, 150px 150px, 80px 80px;
+  animation: float-particles 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float-particles {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(10px, -10px) rotate(120deg); }
+  66% { transform: translate(-5px, 5px) rotate(240deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Typography Classes */
+.text-organic {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: 'cv01', 'cv02', 'cv03', 'cv04';
+}
+
+.heading-nature {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.025em;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .organic-shape {
+    animation: none;
+  }
+  
+  .nature-gradient {
+    animation: none;
+  }
+  
+  .floating-particles::before {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-sage-500: #5a7d42;
+    --color-forest-500: #1a3329;
+    --color-moss-500: #6b8c47;
+  }
+}
+
+/* Focus styles for accessibility */
+.focus-nature:focus {
+  outline: 2px solid var(--color-sage-500);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(135, 169, 107, 0.2);
+}
