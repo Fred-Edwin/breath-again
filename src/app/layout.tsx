@@ -4,6 +4,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import PageTransition from '@/components/animations/PageTransition'
+import StructuredData from '@/components/StructuredData'
+import { generateMetadata, organizationSchema } from '@/lib/seo'
 import '../styles/globals.css'
 import '../styles/design-system.css'
 
@@ -19,42 +21,7 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Breathe Again - Biophilic Design Studio',
-    template: '%s | Breathe Again'
-  },
-  description: 'Transforming spaces with nature-inspired design for healthier, more sustainable living. We create biophilic environments that reconnect you with nature.',
-  keywords: ['biophilic design', 'sustainable design', 'interior design', 'landscape architecture', 'wellness spaces', 'nature-inspired design'],
-  authors: [{ name: 'Breathe Again Design Studio' }],
-  creator: 'Breathe Again',
-  publisher: 'Breathe Again',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://breatheagain.design',
-    title: 'Breathe Again - Biophilic Design Studio',
-    description: 'Transforming spaces with nature-inspired design for healthier, more sustainable living.',
-    siteName: 'Breathe Again',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Breathe Again - Biophilic Design Studio',
-    description: 'Transforming spaces with nature-inspired design for healthier, more sustainable living.',
-    creator: '@breatheagain',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+export const metadata: Metadata = generateMetadata()
 
 export default function RootLayout({
   children,
@@ -70,6 +37,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} text-organic antialiased bg-sage-25 dark:bg-forest-900 text-forest-900 dark:text-sage-100 min-h-screen flex flex-col transition-colors duration-300`}>
+        <StructuredData data={organizationSchema} />
         <ThemeProvider>
           <Header />
           <main className="flex-grow">

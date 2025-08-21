@@ -9,6 +9,7 @@ interface AnimatedButtonProps extends MotionProps {
   variant?: 'lift' | 'scale' | 'glow' | 'float' | 'ripple'
   className?: string
   disabled?: boolean
+  onClick?: () => void
 }
 
 export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>(

@@ -1,9 +1,8 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
+import { generateMetadata as generateSEOMetadata, pageSEO } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Services - Breathe Again',
-  description: 'Discover our biophilic design services including interior design, landscape architecture, and wellness consulting.',
-}
+export const metadata: Metadata = generateSEOMetadata(pageSEO.services)
 
 export default function Services() {
   const services = [
