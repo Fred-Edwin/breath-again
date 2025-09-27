@@ -49,7 +49,7 @@ export default function PortfolioFilters({
             <div className="relative flex-grow">
               <input
                 type="text"
-                placeholder="Search projects..."
+                placeholder="Search services..."
                 value={filterState.searchTerm}
                 onChange={(e) => handleSearchChange(e.target.value)}
                 onFocus={() => setIsSearchExpanded(true)}

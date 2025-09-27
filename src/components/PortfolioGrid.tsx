@@ -98,11 +98,11 @@ export default function PortfolioGrid({
             transition={{ duration: 0.3 }}
           >
             {filteredProjects.length === 0 ? (
-              'No projects found'
+              'No services found'
             ) : filteredProjects.length === 1 ? (
-              '1 project'
+              '1 service'
             ) : (
-              `${filteredProjects.length} projects`
+              `${filteredProjects.length} services`
             )}
           </motion.h2>
           
@@ -134,7 +134,7 @@ export default function PortfolioGrid({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
-          <h3 className="text-xl font-semibold text-forest-900 mb-2">No projects found</h3>
+          <h3 className="text-xl font-semibold text-forest-900 mb-2">No services found</h3>
           <p className="text-forest-600 mb-6">
             Try adjusting your search terms or category filters to see more results.
           </p>
@@ -149,7 +149,7 @@ export default function PortfolioGrid({
         </motion.div>
       )}
 
-      {/* Projects Grid */}
+      {/* Services Grid */}
       {filteredProjects.length > 0 && (
         <motion.div
           className={getGridClasses()}
@@ -199,7 +199,7 @@ export default function PortfolioGrid({
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            Load More Projects
+            Load More Services
           </motion.button>
         </motion.div>
       )}

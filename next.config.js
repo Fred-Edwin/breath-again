@@ -1,14 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // App Router is enabled by default in Next.js 13+
-  // No experimental config needed
+  // Production optimizations
+  poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
+
+  // Performance optimizations
+  optimizeFonts: true,
+
+  // Production-ready settings
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false, // Enable for production
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false, // Enable for production
   },
+
+  // Image optimization
   images: {
+    formats: ['image/webp', 'image/avif'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -17,6 +27,29 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ]
   },
 }
 

@@ -20,7 +20,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://instagram.com/breatheagain_01',
       icon: (
         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path fillRule="evenodd" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.988 11.988 11.988c6.62 0 11.987-5.367 11.987-11.988C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.329-1.297L6.825 14.2c.555.555 1.325.902 2.172.902c1.706 0 3.092-1.386 3.092-3.092c0-.847-.347-1.617-.902-2.172l1.491-1.605c.807.881 1.297 2.032 1.297 3.329c0 2.696-2.188 4.884-4.884 4.884l.358.372zM16.988 8.449c0 1.297-.49 2.448-1.297 3.329L14.2 10.173c.555-.555.902-1.325.902-2.172c0-1.706-1.386-3.092-3.092-3.092c-.847 0-1.617.347-2.172.902L8.233 4.216c.881-.807 2.032-1.297 3.329-1.297c2.696 0 4.884 2.188 4.884 4.884l.372-.358z" clipRule="evenodd" />
@@ -64,17 +64,19 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-sage-500 to-forest-600 rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden bg-white shadow-sm">
+                <img
+                  src="/logo.jpg"
+                  alt="Breathe Again Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h2 className="text-2xl font-serif font-bold text-sage-50">
                   Breathe Again
                 </h2>
                 <span className="text-xs text-sage-300 font-light tracking-wide">
-                  BIOPHILIC DESIGN STUDIO
+                  RECONNECTING CITIES WITH NATURE
                 </span>
               </div>
             </div>
@@ -92,23 +94,23 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <address className="text-sage-200 text-sm not-italic">
-                  123 Green Street, Nature District, ND 12345
+                  Mawanga, Nakuru, Kenya 20100
                 </address>
               </div>
               <div className="flex items-center space-x-3">
                 <svg className="w-5 h-5 text-sage-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+15551234567" className="text-sage-200 text-sm hover:text-sage-50 transition-colors">
-                  (555) 123-4567
+                <a href="tel:+254702700247" className="text-sage-200 text-sm hover:text-sage-50 transition-colors">
+                  +254 702 700 247
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <svg className="w-5 h-5 text-sage-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:hello@breatheagain.design" className="text-sage-200 text-sm hover:text-sage-50 transition-colors">
-                  hello@breatheagain.design
+                <a href="mailto:breatheagain001@gmail.com" className="text-sage-200 text-sm hover:text-sage-50 transition-colors">
+                  breatheagain001@gmail.com
                 </a>
               </div>
             </div>

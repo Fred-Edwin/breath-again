@@ -2,531 +2,289 @@ import { Project } from '@/types/portfolio'
 
 export const portfolioProjects: Project[] = [
   {
-    id: 'urban-oasis-apartment',
-    title: 'Urban Oasis Apartment',
-    subtitle: 'Downtown Living Transformed',
-    description: 'A complete biophilic transformation of a 1,200 sq ft downtown apartment, featuring living walls, natural materials, and carefully curated plant installations that create a serene sanctuary in the heart of the city.',
-    shortDescription: 'Downtown apartment transformed into a green sanctuary with living walls and natural elements.',
+    id: 'nairobi-apartment-vertical-garden',
+    title: 'Vertical Garden Solutions',
+    subtitle: 'Maximizing Green Space in Urban Environments',
+    description: 'Our vertical garden designs showcase how to transform any wall into a living ecosystem. Using modular systems and climate-resilient plants, we create stunning green features that thrive in Kenyan urban environments.',
+    shortDescription: 'Modular vertical garden systems for urban space transformation.',
     category: 'residential',
-    tags: ['living walls', 'air purification', 'urban living', 'small spaces', 'plants'],
+    tags: ['vertical gardens', 'urban solutions', 'modular design', 'space optimization', 'green walls'],
     featured: true,
-    year: 2023,
-    location: 'Chicago, IL',
-    client: 'Sarah & Michael Chen',
-    slug: 'urban-oasis-apartment',
-    href: '/portfolio/urban-oasis-apartment',
+    year: 2025,
+    location: 'Nairobi, Kenya',
+    client: 'Capability Showcase',
+    slug: 'nairobi-apartment-vertical-garden',
+    href: '/portfolio/nairobi-apartment-vertical-garden',
     thumbnail: {
-      id: 'urban-thumb',
-      src: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop',
-      alt: 'Urban Oasis Apartment living room with living wall',
+      id: 'concept-1-thumb',
+      src: '/concept_1.jpg',
+      alt: 'Colorful vertical garden with varied plant textures',
       width: 800,
       height: 600,
       type: 'main'
     },
     images: [
       {
-        id: 'urban-1',
-        src: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop',
-        alt: 'Living room with living wall feature',
+        id: 'concept-1-main',
+        src: '/concept_1.jpg',
+        alt: 'Modular vertical garden with diverse plant selection',
         width: 1200,
         height: 800,
         type: 'main'
       },
       {
-        id: 'urban-before',
-        src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop',
-        alt: 'Before: Standard apartment living room',
-        width: 1200,
-        height: 800,
-        type: 'before'
-      },
-      {
-        id: 'urban-after',
-        src: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop',
-        alt: 'After: Biophilic living room transformation',
-        width: 1200,
-        height: 800,
-        type: 'after'
-      },
-      {
-        id: 'urban-2',
-        src: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1200&h=800&fit=crop',
-        alt: 'Kitchen with herb wall and natural materials',
+        id: 'concept-4-detail',
+        src: '/concept_4.jpg',
+        alt: 'Balcony vertical garden installation',
         width: 1200,
         height: 800,
         type: 'detail'
       }
     ],
     details: {
-      overview: 'This downtown apartment transformation demonstrates how biophilic design can create a natural sanctuary even in the most urban environments. Through strategic use of living walls, natural materials, and carefully planned plant installations, we created a space that reduces stress and improves air quality.',
-      challenge: 'Limited natural light, small space constraints, and urban pollution required creative solutions to bring nature indoors effectively.',
-      solution: 'We implemented a comprehensive biophilic design strategy including a statement living wall, low-light plant selections, natural stone accents, and a custom herb garden in the kitchen.',
+      overview: 'Our vertical garden capability demonstrates how modular plant systems can transform any urban space into a green haven. We specialize in climate-resilient designs and efficient systems perfect for Kenyan urban environments.',
+      challenge: 'Urban spaces often lack room for traditional gardens, residents need low-maintenance solutions that can thrive in apartment conditions while staying affordable.',
+      solution: 'We design modular vertical garden panels with automated irrigation, select drought-resistant native plants, and create systems that maximize green coverage in minimal space.',
       outcomes: [
         {
-          metric: 'Air Quality Improvement',
-          value: '65%',
-          description: 'Reduction in indoor air pollutants'
+          metric: 'Space Efficiency',
+          value: '75%',
+          description: 'More plants per square meter than traditional planters'
         },
         {
-          metric: 'Stress Reduction',
-          value: '40%',
-          description: 'Client-reported stress level decrease'
-        },
-        {
-          metric: 'Property Value',
-          value: '+15%',
-          description: 'Estimated increase in apartment value'
-        }
-      ],
-      features: [
-        'Custom living wall with automated irrigation',
-        'Low-light plant species selection',
-        'Natural stone and wood accents',
-        'Kitchen herb garden',
-        'Air-purifying plant placement'
-      ],
-      timeline: '6 weeks',
-      budget: '$15,000 - $25,000',
-      team: ['Sarah Chen (Lead Designer)', 'Michael Rodriguez (Plant Specialist)', 'Lisa Wang (Installation)'],
-      testimonial: {
-        quote: 'Our apartment went from feeling cramped and stressful to being our personal oasis. The living wall is not just beautiful—we can literally feel the difference in air quality.',
-        author: 'Sarah Chen',
-        role: 'Homeowner'
-      }
-    }
-  },
-  {
-    id: 'wellness-corporate-office',
-    title: 'Wellness Corporate Office',
-    subtitle: 'Productivity Through Nature',
-    description: 'A 15,000 sq ft corporate headquarters redesign that boosted employee productivity by 28% through strategic biophilic elements, including living architecture, natural lighting, and wellness zones.',
-    shortDescription: 'Corporate office redesign that increased productivity through biophilic elements.',
-    category: 'commercial',
-    tags: ['productivity', 'employee wellness', 'living architecture', 'corporate', 'wellness zones'],
-    featured: true,
-    year: 2023,
-    location: 'Austin, TX',
-    client: 'TechFlow Solutions',
-    slug: 'wellness-corporate-office',
-    href: '/portfolio/wellness-corporate-office',
-    thumbnail: {
-      id: 'corporate-thumb',
-      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
-      alt: 'Modern office with living wall and natural elements',
-      width: 800,
-      height: 600,
-      type: 'main'
-    },
-    images: [
-      {
-        id: 'corporate-1',
-        src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop',
-        alt: 'Open office with living wall backdrop',
-        width: 1200,
-        height: 800,
-        type: 'main'
-      },
-      {
-        id: 'corporate-wellness',
-        src: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&h=800&fit=crop',
-        alt: 'Wellness zone with natural elements',
-        width: 1200,
-        height: 800,
-        type: 'detail'
-      }
-    ],
-    details: {
-      overview: 'This corporate headquarters transformation showcases how biophilic design can dramatically improve workplace productivity and employee satisfaction while creating a distinctive brand environment.',
-      challenge: 'High employee turnover, low productivity scores, and a sterile office environment that failed to attract top talent.',
-      solution: 'Comprehensive biophilic redesign including living architecture, natural lighting systems, wellness zones, and integrated plant systems throughout the workspace.',
-      outcomes: [
-        {
-          metric: 'Productivity Increase',
-          value: '28%',
-          description: 'Measured improvement in task completion'
-        },
-        {
-          metric: 'Employee Satisfaction',
-          value: '85%',
-          description: 'Positive feedback on workspace improvements'
-        },
-        {
-          metric: 'Sick Days Reduced',
-          value: '35%',
-          description: 'Decrease in employee sick leave'
-        }
-      ],
-      features: [
-        'Living architecture integration',
-        'Natural lighting optimization',
-        'Dedicated wellness zones',
-        'Air-purifying plant systems',
-        'Biophilic meeting spaces'
-      ],
-      timeline: '12 weeks',
-      budget: '$75,000 - $125,000'
-    }
-  },
-  {
-    id: 'healing-garden-spa',
-    title: 'Healing Garden Spa',
-    subtitle: 'Therapeutic Sanctuary Design',
-    description: 'A luxury spa featuring therapeutic gardens, water features, and natural stone elements designed to promote deep relaxation and healing through nature connection.',
-    shortDescription: 'Luxury spa with therapeutic gardens and natural healing elements.',
-    category: 'hospitality',
-    tags: ['therapeutic design', 'water features', 'spa', 'healing', 'relaxation'],
-    featured: true,
-    year: 2022,
-    location: 'Sedona, AZ',
-    client: 'Desert Rose Wellness Resort',
-    slug: 'healing-garden-spa',
-    href: '/portfolio/healing-garden-spa',
-    thumbnail: {
-      id: 'spa-thumb',
-      src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop',
-      alt: 'Spa treatment room with natural elements',
-      width: 800,
-      height: 600,
-      type: 'main'
-    },
-    images: [
-      {
-        id: 'spa-1',
-        src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=800&fit=crop',
-        alt: 'Spa treatment room with stone and plants',
-        width: 1200,
-        height: 800,
-        type: 'main'
-      },
-      {
-        id: 'spa-garden',
-        src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&h=800&fit=crop',
-        alt: 'Therapeutic garden with water feature',
-        width: 1200,
-        height: 800,
-        type: 'detail'
-      }
-    ],
-    details: {
-      overview: 'This healing garden spa creates a therapeutic environment where guests can reconnect with nature while experiencing deep relaxation and rejuvenation.',
-      challenge: 'Creating an authentic connection to the natural desert environment while providing luxury amenities and comfort.',
-      solution: 'Integration of native desert plants, natural stone elements, water features, and therapeutic garden spaces that complement the spa services.',
-      outcomes: [
-        {
-          metric: 'Guest Satisfaction',
-          value: '95%',
-          description: 'Exceptional guest experience ratings'
-        },
-        {
-          metric: 'Booking Increase',
-          value: '40%',
-          description: 'Growth in spa reservations'
-        },
-        {
-          metric: 'Award Recognition',
-          value: '3',
-          description: 'Industry design awards received'
-        }
-      ],
-      features: [
-        'Therapeutic desert garden',
-        'Natural stone treatment rooms',
-        'Water feature integration',
-        'Native plant installations',
-        'Sensory experience design'
-      ],
-      timeline: '16 weeks',
-      awards: ['Best Spa Design 2023', 'Biophilic Excellence Award', 'Hospitality Design Award']
-    }
-  },
-  {
-    id: 'sustainable-family-home',
-    title: 'Sustainable Family Home',
-    subtitle: 'Modern Living in Harmony',
-    description: 'A complete home renovation that seamlessly integrates indoor and outdoor living spaces using sustainable materials and biophilic design principles for a growing family.',
-    shortDescription: 'Family home renovation integrating indoor-outdoor living with sustainable materials.',
-    category: 'residential',
-    tags: ['sustainable materials', 'family-friendly', 'indoor-outdoor', 'renovation', 'eco-friendly'],
-    featured: false,
-    year: 2023,
-    location: 'Portland, OR',
-    client: 'The Johnson Family',
-    slug: 'sustainable-family-home',
-    href: '/portfolio/sustainable-family-home',
-    thumbnail: {
-      id: 'family-thumb',
-      src: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
-      alt: 'Modern family home with natural materials',
-      width: 800,
-      height: 600,
-      type: 'main'
-    },
-    images: [
-      {
-        id: 'family-1',
-        src: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=800&fit=crop',
-        alt: 'Living area with natural materials and plants',
-        width: 1200,
-        height: 800,
-        type: 'main'
-      }
-    ],
-    details: {
-      overview: 'This family home renovation creates a healthy, sustainable living environment that grows with the family while maintaining strong connections to the natural world.',
-      challenge: 'Balancing the needs of a growing family with sustainable design principles and budget constraints.',
-      solution: 'Strategic use of reclaimed materials, energy-efficient systems, and flexible spaces that adapt to family life while incorporating biophilic elements.',
-      outcomes: [
-        {
-          metric: 'Energy Reduction',
-          value: '45%',
-          description: 'Decrease in energy consumption'
-        },
-        {
-          metric: 'Indoor Air Quality',
+          metric: 'Water Savings',
           value: '60%',
-          description: 'Improvement in air quality metrics'
-        }
-      ],
-      features: [
-        'Reclaimed wood features',
-        'Energy-efficient systems',
-        'Flexible family spaces',
-        'Indoor-outdoor flow',
-        'Sustainable materials'
-      ],
-      timeline: '10 weeks'
-    }
-  },
-  {
-    id: 'mindful-meditation-center',
-    title: 'Mindful Meditation Center',
-    subtitle: 'Tranquil Space for Inner Peace',
-    description: 'A dedicated meditation and mindfulness center designed with natural textures, calming colors, and biophilic elements to support deep contemplation and stress relief.',
-    shortDescription: 'Meditation center designed for tranquility with natural textures and calming elements.',
-    category: 'wellness',
-    tags: ['meditation', 'mindfulness', 'tranquility', 'stress relief', 'natural textures'],
-    featured: false,
-    year: 2022,
-    location: 'Boulder, CO',
-    client: 'Mountain Peace Center',
-    slug: 'mindful-meditation-center',
-    href: '/portfolio/mindful-meditation-center',
-    thumbnail: {
-      id: 'meditation-thumb',
-      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-      alt: 'Meditation space with natural elements',
-      width: 800,
-      height: 600,
-      type: 'main'
-    },
-    images: [
-      {
-        id: 'meditation-1',
-        src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop',
-        alt: 'Meditation hall with natural lighting',
-        width: 1200,
-        height: 800,
-        type: 'main'
-      }
-    ],
-    details: {
-      overview: 'This meditation center creates an environment conducive to inner peace and mindfulness practice through careful attention to natural materials, lighting, and spatial flow.',
-      challenge: 'Creating a space that supports various meditation practices while maintaining acoustic privacy and visual calm.',
-      solution: 'Integration of natural sound dampening materials, carefully controlled natural lighting, and biophilic elements that support contemplative states.',
-      outcomes: [
-        {
-          metric: 'User Satisfaction',
-          value: '92%',
-          description: 'Positive feedback on space quality'
+          description: 'Reduction in water usage through efficient irrigation'
         },
         {
-          metric: 'Session Completion',
-          value: '80%',
-          description: 'Increase in full meditation sessions'
+          metric: 'Cost Range',
+          value: 'KSH 2,500-13,000/M²',
+          description: 'Flexible pricing for different installation sizes'
         }
       ],
       features: [
-        'Natural acoustic materials',
-        'Controlled lighting systems',
-        'Contemplative plant selection',
-        'Flexible meditation spaces',
-        'Sensory calm design'
+        'Modular plant panel system',
+        'Drip irrigation automation',
+        'Climate-resilient plant selection',
+        'Easy maintenance design',
+        'Expandable modular framework'
       ],
-      timeline: '8 weeks'
+      timeline: '2 weeks',
+      budget: 'KSH 2,500 - 13,000 per M²',
+      team: ['Purity Wanjira Waweru (Lead Designer)'],
+      testimonial: {
+        quote: 'This type of vertical garden system would completely transform my apartment. The modular design makes it perfect for our space constraints.',
+        author: 'Sarah Muthoni',
+        role: 'Urban Resident'
+      }
     }
   },
   {
-    id: 'rooftop-restaurant-garden',
-    title: 'Rooftop Restaurant Garden',
-    subtitle: 'Farm-to-Table Dining Experience',
-    description: 'An innovative rooftop restaurant featuring living herb walls, sustainable growing systems, and biophilic design elements that enhance the farm-to-table dining experience.',
-    shortDescription: 'Rooftop restaurant with living herb walls and sustainable growing systems.',
-    category: 'hospitality',
-    tags: ['farm-to-table', 'rooftop garden', 'herbs', 'restaurant', 'sustainable'],
+    id: 'kisumu-residential-consultation',
+    title: 'Design Consultation Services',
+    subtitle: 'Expert Guidance for Biophilic Integration',
+    description: 'Our comprehensive design consultation service helps developers and property owners integrate biophilic elements effectively. We provide detailed guidance, planning, and implementation strategies that enhance property value and resident satisfaction.',
+    shortDescription: 'Professional biophilic design consultation and planning services.',
+    category: 'consultation',
+    tags: ['design consultation', 'residential development', 'urban planning', 'property value', 'community wellbeing'],
     featured: true,
-    year: 2023,
-    location: 'San Francisco, CA',
-    client: 'Garden Table Restaurant',
-    slug: 'rooftop-restaurant-garden',
-    href: '/portfolio/rooftop-restaurant-garden',
+    year: 2025,
+    location: 'Kisumu, Kenya',
+    client: 'Service Showcase',
+    slug: 'kisumu-residential-consultation',
+    href: '/portfolio/kisumu-residential-consultation',
     thumbnail: {
-      id: 'restaurant-thumb',
-      src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
-      alt: 'Rooftop restaurant with garden elements',
+      id: 'concept-2-thumb',
+      src: '/concept_2.jpg',
+      alt: 'Vertical garden installation with wooden framework',
       width: 800,
       height: 600,
       type: 'main'
     },
     images: [
       {
-        id: 'restaurant-1',
-        src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop',
-        alt: 'Restaurant dining area with living walls',
+        id: 'concept-2-main',
+        src: '/concept_2.jpg',
+        alt: 'Modular wooden planter system for developments',
         width: 1200,
         height: 800,
         type: 'main'
+      },
+      {
+        id: 'concept-3-detail',
+        src: '/oncept_3.jpg',
+        alt: 'Building facade with integrated vertical gardens',
+        width: 1200,
+        height: 800,
+        type: 'detail'
       }
     ],
     details: {
-      overview: 'This rooftop restaurant transformation creates an immersive farm-to-table experience where diners can see their herbs and vegetables growing while enjoying their meal.',
-      challenge: 'Creating a functional growing system in a rooftop environment while maintaining an elegant dining atmosphere.',
-      solution: 'Custom herb wall systems, weather-resistant plantings, and integrated growing areas that serve both functional and aesthetic purposes.',
+      overview: 'Our consultation service provides comprehensive biophilic design guidance for any development or property. We help integrate nature throughout spaces to enhance satisfaction and market value.',
+      challenge: 'Property owners and developers need expert guidance on cost-effective biophilic integration that increases value while staying within budget constraints.',
+      solution: 'We develop comprehensive biophilic master plans including facade gardens, communal green spaces, and custom garden systems with detailed implementation guidelines.',
       outcomes: [
         {
-          metric: 'Fresh Ingredients',
+          metric: 'Property Value Increase',
+          value: '18%',
+          description: 'Projected increase in unit sales prices'
+        },
+        {
+          metric: 'Sales Acceleration',
+          value: '45%',
+          description: 'Faster pre-sales due to biophilic features'
+        },
+        {
+          metric: 'Service Cost',
+          value: 'KSH 3,500-16,500',
+          description: 'Consultation fee range based on scope'
+        }
+      ],
+      features: [
+        'Facade vertical garden planning',
+        'Communal green space design',
+        'Balcony garden system specifications',
+        'Plant selection guidelines',
+        'Maintenance protocol development'
+      ],
+      timeline: '4 weeks',
+      budget: 'KSH 3,500 - 16,500'
+    }
+  },
+  {
+    id: 'nakuru-wellness-center-installation',
+    title: 'Concept Installation Services',
+    subtitle: 'Biophilic Features for Enhanced Wellbeing',
+    description: 'Our concept installation service creates stunning biophilic features using moss, living walls, and natural textures. We design calming focal points that promote mental health and create memorable spaces.',
+    shortDescription: 'Custom biophilic installations for wellness and ambiance.',
+    category: 'wellness',
+    tags: ['living wall', 'wellness center', 'community space', 'moss installation', 'mental health'],
+    featured: true,
+    year: 2025,
+    location: 'Nakuru, Kenya',
+    client: 'Capability Demo',
+    slug: 'nakuru-wellness-center-installation',
+    href: '/portfolio/nakuru-wellness-center-installation',
+    thumbnail: {
+      id: 'concept-6-thumb',
+      src: '/concept_6.jpg',
+      alt: 'Dramatic moss wall installation in modern space',
+      width: 800,
+      height: 600,
+      type: 'main'
+    },
+    images: [
+      {
+        id: 'concept-6-main',
+        src: '/concept_6.jpg',
+        alt: 'Large-scale moss wall with natural textures',
+        width: 1200,
+        height: 800,
+        type: 'main'
+      },
+      {
+        id: 'concept-5-detail',
+        src: '/concept_5.jpg',
+        alt: 'Living wall behind bathroom mirrors',
+        width: 1200,
+        height: 800,
+        type: 'detail'
+      }
+    ],
+    details: {
+      overview: 'Our concept installation capability transforms any space into a calming sanctuary, using preserved moss and natural textures to create stunning focal points that promote mental wellness and memorable experiences.',
+      challenge: 'Creating low-maintenance, high-impact installations that serve as both art pieces and functional wellness features in any space type.',
+      solution: 'We design dramatic moss wall installations with varied textures and natural patterns, incorporating sustainable materials and minimal maintenance requirements.',
+      outcomes: [
+        {
+          metric: 'Visitor Engagement',
+          value: '85%',
+          description: 'Increase in center utilization and community visits'
+        },
+        {
+          metric: 'Wellbeing Reports',
           value: '70%',
-          description: 'Of herbs grown on-site'
+          description: 'Visitors reporting improved mood and stress relief'
         },
         {
-          metric: 'Customer Satisfaction',
-          value: '88%',
-          description: 'Positive dining experience ratings'
+          metric: 'Installation Range',
+          value: 'KSH 4,000-12,000/M²',
+          description: 'Pricing varies by design complexity and size'
         }
       ],
       features: [
-        'Living herb walls',
-        'On-site growing systems',
-        'Weather-resistant design',
-        'Farm-to-table integration',
-        'Sustainable practices'
+        'Preserved moss wall system',
+        'Natural texture integration',
+        'Low-maintenance design',
+        'Community focal point',
+        'Mental wellness enhancement'
       ],
-      timeline: '14 weeks'
+      timeline: '3 weeks',
+      budget: 'KSH 4,000 - 12,000 per M²'
     }
   },
   {
-    id: 'co-working-nature-space',
-    title: 'Co-working Nature Space',
-    subtitle: 'Collaborative Work in Natural Environment',
-    description: 'A modern co-working space that incorporates extensive biophilic design to boost creativity, reduce stress, and create an inspiring work environment for entrepreneurs and freelancers.',
-    shortDescription: 'Co-working space with biophilic design to boost creativity and reduce stress.',
-    category: 'commercial',
-    tags: ['co-working', 'creativity', 'collaboration', 'entrepreneurs', 'stress reduction'],
+    id: 'mombasa-cafe-installation',
+    title: 'Commercial Space Enhancement',
+    subtitle: 'Bringing Nature to Business Environments',
+    description: 'Our commercial enhancement service creates vibrant living walls featuring diverse plant textures and colors. We transform business spaces into green destinations that enhance customer experience and create unique atmospheres.',
+    shortDescription: 'Biophilic enhancements for commercial and business spaces.',
+    category: 'wellness',
+    tags: ['living wall', 'commercial space', 'café', 'customer experience', 'colorful plants'],
     featured: false,
-    year: 2022,
-    location: 'Brooklyn, NY',
-    client: 'GreenSpace Co-working',
-    slug: 'co-working-nature-space',
-    href: '/portfolio/co-working-nature-space',
+    year: 2025,
+    location: 'Mombasa, Kenya',
+    client: 'Commercial Showcase',
+    slug: 'mombasa-cafe-installation',
+    href: '/portfolio/mombasa-cafe-installation',
     thumbnail: {
-      id: 'coworking-thumb',
-      src: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop',
-      alt: 'Co-working space with plants and natural light',
+      id: 'concept-7-thumb',
+      src: '/concept_7.jpg',
+      alt: 'Colorful living wall with diverse plant species',
       width: 800,
       height: 600,
       type: 'main'
     },
     images: [
       {
-        id: 'coworking-1',
-        src: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop',
-        alt: 'Open co-working area with abundant plants',
+        id: 'concept-7-main',
+        src: '/concept_7.jpg',
+        alt: 'Vibrant living wall with purple and green plants',
         width: 1200,
         height: 800,
         type: 'main'
       }
     ],
     details: {
-      overview: 'This co-working space demonstrates how biophilic design can create an inspiring and productive environment for creative professionals and entrepreneurs.',
-      challenge: 'Creating distinct work zones while maintaining an open, collaborative feeling and managing plant maintenance in a shared space.',
-      solution: 'Strategic plant placement, low-maintenance species selection, and natural elements that define spaces without creating barriers.',
+      overview: 'Our commercial enhancement capability brings life and color to any business space, creating Instagram-worthy backdrops that enhance customer experience and establish businesses as unique destinations.',
+      challenge: 'Creating visually striking installations that thrive in commercial environments while being low-maintenance and cost-effective for business owners.',
+      solution: 'We design modular living wall systems with colorful, hardy plants that create visual interest while requiring minimal upkeep and fitting within business budgets.',
       outcomes: [
         {
-          metric: 'Member Satisfaction',
-          value: '91%',
-          description: 'Positive feedback on work environment'
+          metric: 'Customer Dwell Time',
+          value: '35%',
+          description: 'Increase in average customer visit duration'
         },
         {
-          metric: 'Productivity Reports',
-          value: '25%',
-          description: 'Self-reported productivity increase'
+          metric: 'Social Media Engagement',
+          value: '120%',
+          description: 'Increase in café photo shares and tags'
+        },
+        {
+          metric: 'Installation Cost',
+          value: 'KSH 6,800',
+          description: 'Total project cost for 8M² installation'
         }
       ],
       features: [
-        'Strategic plant placement',
-        'Natural workspace division',
-        'Low-maintenance systems',
-        'Collaborative zones',
-        'Creative inspiration areas'
+        'Colorful plant selection',
+        'Modular installation system',
+        'Low-maintenance species',
+        'Customer photo backdrop',
+        'Enhanced air quality'
       ],
-      timeline: '6 weeks'
-    }
-  },
-  {
-    id: 'luxury-hotel-lobby',
-    title: 'Luxury Hotel Lobby',
-    subtitle: 'Grand Entrance with Natural Elegance',
-    description: 'An elegant hotel lobby redesign featuring a stunning living wall installation, natural stone elements, and biophilic design that creates a memorable first impression for guests.',
-    shortDescription: 'Elegant hotel lobby with living wall installation and natural stone elements.',
-    category: 'hospitality',
-    tags: ['luxury', 'hotel', 'living wall', 'natural stone', 'grand entrance'],
-    featured: false,
-    year: 2023,
-    location: 'Miami, FL',
-    client: 'Ocean Vista Resort',
-    slug: 'luxury-hotel-lobby',
-    href: '/portfolio/luxury-hotel-lobby',
-    thumbnail: {
-      id: 'hotel-thumb',
-      src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop',
-      alt: 'Luxury hotel lobby with living wall',
-      width: 800,
-      height: 600,
-      type: 'main'
-    },
-    images: [
-      {
-        id: 'hotel-1',
-        src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&h=800&fit=crop',
-        alt: 'Grand hotel lobby with natural elements',
-        width: 1200,
-        height: 800,
-        type: 'main'
-      }
-    ],
-    details: {
-      overview: 'This luxury hotel lobby creates an unforgettable first impression through the integration of a dramatic living wall, natural stone features, and carefully curated biophilic elements.',
-      challenge: 'Creating a grand, luxurious feel while incorporating natural elements that require ongoing maintenance in a high-traffic environment.',
-      solution: 'A dramatic living wall centerpiece, durable natural stone installations, and strategic plant placement that withstands heavy foot traffic.',
-      outcomes: [
-        {
-          metric: 'Guest Ratings',
-          value: '4.8/5',
-          description: 'Average lobby experience rating'
-        },
-        {
-          metric: 'Social Media',
-          value: '300%',
-          description: 'Increase in lobby photo shares'
-        }
-      ],
-      features: [
-        'Dramatic living wall centerpiece',
-        'Natural stone installations',
-        'High-traffic plant selection',
-        'Luxury biophilic integration',
-        'Instagram-worthy design'
-      ],
-      timeline: '10 weeks'
+      timeline: '2 weeks',
+      budget: 'KSH 4,000 - 12,000 per M²'
     }
   }
 ]
@@ -563,7 +321,7 @@ export const getCategoryStats = () => {
   }, {} as Record<string, number>)
 
   return [
-    { value: 'all' as const, label: 'All Projects', count: portfolioProjects.length },
+    { value: 'all' as const, label: 'All Services', count: portfolioProjects.length },
     { value: 'residential' as const, label: 'Residential', count: stats.residential || 0 },
     { value: 'commercial' as const, label: 'Commercial', count: stats.commercial || 0 },
     { value: 'hospitality' as const, label: 'Hospitality', count: stats.hospitality || 0 },

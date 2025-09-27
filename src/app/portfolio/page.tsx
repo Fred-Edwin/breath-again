@@ -74,14 +74,14 @@ export default function Portfolio() {
               className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-forest-900 mb-6"
               variants={itemVariants}
             >
-              Our Portfolio
+              Services Showcase
             </motion.h1>
-            
+
             <motion.p
               className="text-xl md:text-2xl text-forest-700 leading-relaxed max-w-3xl mx-auto mb-8"
               variants={itemVariants}
             >
-              Discover how we've transformed spaces across various industries with the power of biophilic design
+              Explore our biophilic design capabilities and discover how we can transform your space with nature-inspired solutions
             </motion.p>
 
             <motion.div
@@ -89,18 +89,16 @@ export default function Portfolio() {
               variants={itemVariants}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-forest-800">
-                  {portfolioProjects.length}+
-                </div>
-                <div className="text-sm">Projects Completed</div>
+                <div className="text-2xl font-bold text-forest-800">3</div>
+                <div className="text-sm">Service Areas</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-forest-800">5</div>
-                <div className="text-sm">Categories</div>
+                <div className="text-sm">Design Categories</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-forest-800">95%</div>
-                <div className="text-sm">Client Satisfaction</div>
+                <div className="text-2xl font-bold text-forest-800">100%</div>
+                <div className="text-sm">Nature Integration</div>
               </div>
             </motion.div>
           </div>
@@ -150,10 +148,10 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 mb-4">
-              Featured Projects
+              Featured Capabilities
             </h2>
             <p className="text-lg text-forest-600 max-w-2xl mx-auto">
-              Highlighted transformations that showcase the full potential of biophilic design
+              Discover our design expertise and how we bring nature into urban spaces
             </p>
           </motion.div>
 
@@ -179,10 +177,15 @@ export default function Portfolio() {
                   whileHover={{ y: -10 }}
                 >
                   <div className="bg-white rounded-2xl overflow-hidden shadow-sm group-hover:shadow-xl transition-all duration-300">
-                    <div className="aspect-[4/3] bg-gradient-to-br from-sage-200 to-moss-200 relative overflow-hidden">
+                    <div className="aspect-[4/3] relative overflow-hidden">
+                      <img
+                        src={project.thumbnail.src}
+                        alt={project.thumbnail.alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                         <div className="bg-white text-forest-700 px-6 py-2 rounded-lg font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                          View Project
+                          View Concept
                         </div>
                       </div>
                       <div className="absolute top-4 left-4">
@@ -233,19 +236,19 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 mb-4">
-              Our Impact
+              Our Capabilities
             </h2>
             <p className="text-lg text-forest-600 max-w-2xl mx-auto">
-              Numbers that reflect our commitment to creating healthier, more sustainable spaces
+              Metrics that reflect our expertise in creating healthier, nature-connected spaces
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { number: `${portfolioProjects.length}+`, label: "Projects Completed", description: "Spaces transformed with biophilic design" },
-              { number: "95%", label: "Client Satisfaction", description: "Clients report improved well-being" },
-              { number: "40%", label: "Air Quality Improvement", description: "Average improvement in indoor air quality" },
-              { number: "25%", label: "Productivity Increase", description: "Average boost in workplace performance" }
+              { number: "3", label: "Service Categories", description: "Comprehensive biophilic design solutions" },
+              { number: "100%", label: "Nature Integration", description: "Every design connects you with nature" },
+              { number: "40%", label: "Air Quality Improvement", description: "Plants naturally purify indoor environments" },
+              { number: "25%", label: "Wellness Enhancement", description: "Nature exposure boosts mental well-being" }
             ].map((stat, index) => (
               <motion.div
                 key={index}

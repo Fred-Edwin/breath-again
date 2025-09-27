@@ -128,11 +128,11 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-forest-900 mb-1">Visit Our Studio</h3>
+                    <h3 className="text-lg font-semibold text-forest-900 mb-1">Service Area</h3>
                     <p className="text-forest-600">
-                      123 Green Street<br />
-                      Nature District, ND 12345<br />
-                      United States
+                      Nakuru & surrounding areas<br />
+                      Kenya-wide consultations available<br />
+                      <span className="text-sm text-forest-500">Remote consultations available</span>
                     </p>
                   </div>
                 </motion.div>
@@ -150,12 +150,12 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-forest-900 mb-1">Call Us</h3>
                     <p className="text-forest-600">
-                      <a href="tel:+15551234567" className="hover:text-forest-800 transition-colors">
-                        (555) 123-4567
+                      <a href="tel:+254702700247" className="hover:text-forest-800 transition-colors">
+                        +254 702 700 247
                       </a>
                     </p>
                     <p className="text-sm text-forest-500 mt-1">
-                      Mon-Fri: 9AM-6PM EST
+                      Mon-Fri: 9AM-6PM EAT
                     </p>
                   </div>
                 </motion.div>
@@ -173,8 +173,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-forest-900 mb-1">Email Us</h3>
                     <p className="text-forest-600">
-                      <a href="mailto:hello@breatheagain.design" className="hover:text-forest-800 transition-colors">
-                        hello@breatheagain.design
+                      <a href="mailto:breatheagain001@gmail.com" className="hover:text-forest-800 transition-colors">
+                        breatheagain001@gmail.com
                       </a>
                     </p>
                     <p className="text-sm text-forest-500 mt-1">
@@ -216,10 +216,10 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 mb-4">
-              Visit Our Studio
+              Let's Connect
             </h2>
             <p className="text-lg text-forest-600 max-w-2xl mx-auto">
-              Experience biophilic design firsthand in our nature-inspired studio space
+              Ready to bring nature into your space? Reach out through any of these channels
             </p>
           </motion.div>
 
@@ -237,8 +237,8 @@ export default function Contact() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <p className="text-lg font-medium">Interactive Map</p>
-                <p className="text-sm opacity-75">123 Green Street, Nature District</p>
+                <p className="text-lg font-medium">Follow Us on Social Media</p>
+                <p className="text-sm opacity-75">@breatheagain_01 on Instagram</p>
               </div>
               
               {/* Decorative elements */}
@@ -255,31 +255,37 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div>
-                <h3 className="text-xl font-semibold text-forest-900 mb-4">Business Hours</h3>
-                <div className="space-y-2 text-forest-600">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
+                <h3 className="text-xl font-semibold text-forest-900 mb-4">Response Times</h3>
+                <div className="space-y-3 text-forest-600">
+                  <div className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Email responses within 24 hours</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM</span>
+                  <div className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Phone calls Mon-Fri 9AM-6PM EAT</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>By Appointment</span>
+                  <div className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Social media messages same day</span>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-forest-900 mb-4">Studio Features</h3>
+                <h3 className="text-xl font-semibold text-forest-900 mb-4">What We Offer</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { icon: '🌱', text: 'Living plant displays' },
-                    { icon: '💡', text: 'Natural lighting examples' },
-                    { icon: '🏗️', text: 'Material samples' },
-                    { icon: '📚', text: 'Design consultation area' }
+                    { icon: '🌱', text: 'Free initial consultations' },
+                    { icon: '💡', text: 'Custom design solutions' },
+                    { icon: '🏗️', text: 'Affordable pricing' },
+                    { icon: '📚', text: 'Climate-resilient plants' }
                   ].map((feature, index) => (
                     <motion.div
                       key={index}
@@ -295,25 +301,25 @@ export default function Contact() {
               </div>
 
               <div className="bg-white rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-forest-900 mb-3">Parking & Accessibility</h3>
+                <h3 className="text-lg font-semibold text-forest-900 mb-3">How We Work</h3>
                 <ul className="space-y-2 text-forest-600">
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Free parking available
+                    Site visits throughout Kenya
                   </li>
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Wheelchair accessible
+                    Remote consultations available
                   </li>
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Public transit nearby
+                    Flexible meeting arrangements
                   </li>
                 </ul>
               </div>

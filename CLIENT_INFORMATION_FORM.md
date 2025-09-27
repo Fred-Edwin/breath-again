@@ -1,15 +1,15 @@
-# Client Information Form - Website Personalization
+# Breathe Again Website - Client Information Form
 
 ## Overview
-This form will help us customize your biophilic design website with your specific business details, branding, and content. Please provide as much detail as possible to ensure accurate personalization.
+This form will help us customize your biophilic design website with your specific business details, replacing all placeholder content with your actual information. **Current placeholder content is shown in brackets [like this] for reference - you can edit or completely replace as needed.**
 
 ---
 
 ## 📋 **SECTION 1: BUSINESS INFORMATION**
 
 ### Basic Company Details
-- **Business Name**: ________________________________
-- **Tagline/Subtitle**: ________________________________
+- **Business Name**: [Breathe Again] → ________________________________
+- **Tagline/Subtitle**: [BIOPHILIC DESIGN STUDIO] → ________________________________
 - **Business Type**: 
   - [ ] Interior Design Studio
   - [ ] Landscape Architecture Firm
@@ -18,10 +18,13 @@ This form will help us customize your biophilic design website with your specifi
   - [ ] Other: ________________________________
 
 ### Contact Information
-- **Primary Email**: ________________________________
-- **Phone Number**: ________________________________
-- **Business Address**: 
+- **Primary Email**: [hello@breatheagain.design] → ________________________________
+- **Phone Number**: [(555) 123-4567] → ________________________________
+- **Business Address**:
   ```
+  Current: [123 Green Street, Nature District, ND 12345]
+
+  Your Address:
   Street: ________________________________
   City: ________________________________
   State/Province: ________________________________
@@ -31,11 +34,12 @@ This form will help us customize your biophilic design website with your specifi
 
 ### Online Presence
 - **Website URL** (if existing): ________________________________
-- **Social Media Handles**:
-  - Instagram: ________________________________
+- **Social Media Handles** (current links are placeholder "#"):
+  - Instagram: [#] → ________________________________
   - Facebook: ________________________________
-  - LinkedIn: ________________________________
-  - Pinterest: ________________________________
+  - LinkedIn: [#] → ________________________________
+  - Pinterest: [#] → ________________________________
+  - Twitter/X: [#] → ________________________________
   - Other: ________________________________
 
 ---
@@ -96,7 +100,13 @@ This form will help us customize your biophilic design website with your specifi
 
 ### Team Information
 - **Number of team members**: ________________________________
-- **Key team members** (name, role, brief bio):
+- **Key team members** (current team is placeholder):
+**Current placeholder team:**
+- [Sarah Chen - Founder & Lead Designer] - "With over 15 years in biophilic design, Sarah brings nature to life in every space she touches."
+- [Marcus Johnson - Sustainability Director] - "Marcus ensures every project meets the highest environmental standards while maintaining aesthetic excellence."
+- [Elena Rodriguez - Wellness Consultant] - "Elena specializes in creating spaces that promote mental health and overall well-being through natural design."
+
+**Your actual team** (name, role, brief bio):
   ```
   1. ________________________________
   2. ________________________________
@@ -120,20 +130,37 @@ This form will help us customize your biophilic design website with your specifi
 - [ ] Plant Installation & Maintenance
 - [ ] Other: ________________________________
 
-### Service Details
+### Current Services (placeholder content to replace)
+
+**Current Service 1: [Residential Design]**
+- **Description**: "Create harmonious living spaces that blend natural elements with modern comfort, promoting wellness and tranquility in your daily life."
+- **Starting Price**: [$5,000]
+- **Price Range**: [$5,000 - $50,000+]
+
+**Current Service 2: [Commercial Spaces]**
+- **Description**: "Design productive, healthy work environments that reduce employee stress, increase creativity, and improve overall workplace satisfaction."
+- **Starting Price**: [$15,000]
+- **Price Range**: [$15,000 - $200,000+]
+
+**Current Service 3: [Design Consultation]**
+- **Description**: "Get professional advice and strategic planning to implement biophilic design principles in any space, with flexible consultation options."
+- **Starting Price**: [$250]
+- **Price Range**: [$250 - $2,500]
+
+### Your Actual Services
 For each service you offer, please provide:
 
-**Service 1**: ________________________________
+**Your Service 1**: ________________________________
 - **Description**: ________________________________
 - **Typical project size**: ________________________________
 - **Price range**: ________________________________
 
-**Service 2**: ________________________________
+**Your Service 2**: ________________________________
 - **Description**: ________________________________
 - **Typical project size**: ________________________________
 - **Price range**: ________________________________
 
-**Service 3**: ________________________________
+**Your Service 3**: ________________________________
 - **Description**: ________________________________
 - **Typical project size**: ________________________________
 - **Price range**: ________________________________
@@ -154,7 +181,22 @@ For each service you offer, please provide:
 
 ## 📁 **SECTION 5: PORTFOLIO & PROJECTS**
 
-### Project Categories
+### Current Placeholder Projects (to be replaced)
+**The website currently has 8 placeholder projects:**
+
+**Featured Placeholder Projects:**
+1. **Urban Oasis Apartment** (Chicago, IL) - Residential - Client: Sarah & Michael Chen
+2. **Wellness Corporate Office** (Austin, TX) - Commercial - Client: TechFlow Solutions
+3. **Healing Garden Spa** (Sedona, AZ) - Hospitality - Client: Desert Rose Wellness Resort
+4. **Rooftop Restaurant Garden** (San Francisco, CA) - Hospitality - Client: Garden Table Restaurant
+
+**Additional Placeholder Projects:**
+5. **Sustainable Family Home** (Portland, OR) - Residential - Client: The Johnson Family
+6. **Mindful Meditation Center** (Boulder, CO) - Wellness - Client: Mountain Peace Center
+7. **Co-working Nature Space** (Brooklyn, NY) - Commercial - Client: GreenSpace Co-working
+8. **Luxury Hotel Lobby** (Miami, FL) - Hospitality - Client: Ocean Vista Resort
+
+### Your Actual Project Categories
 **How many projects do you have in each category?**
 - Residential: ________________________________
 - Commercial: ________________________________
@@ -162,8 +204,8 @@ For each service you offer, please provide:
 - Wellness: ________________________________
 - Landscape: ________________________________
 
-### Featured Projects
-**Please provide details for your top 3-5 projects:**
+### Your Featured Projects
+**Please provide details for your top 6-8 projects to replace the placeholder ones:**
 
 **Project 1:**
 - **Name**: ________________________________
@@ -265,6 +307,17 @@ For each service you offer, please provide:
 
 ## 🎯 **SECTION 8: WEBSITE-SPECIFIC PREFERENCES**
 
+### Current Homepage Content (to replace)
+**Current Hero Section:**
+- **Headline**: "Transform Your Space with Nature's Wisdom"
+- **Subheading**: "Biophilic Design That Heals & Inspires"
+- **Description**: "We create harmonious environments that reconnect you with nature, reduce stress, boost productivity, and enhance your overall well-being through scientifically-backed biophilic design principles."
+
+**Your Preferred Homepage Content:**
+- **Headline**: ________________________________
+- **Subheading**: ________________________________
+- **Description**: ________________________________
+
 ### Content Priorities
 **Rank in order of importance (1-5):**
 - [ ] Portfolio showcase
@@ -361,16 +414,20 @@ Dislike: ________________________________
 
 ## 📎 **SECTION 12: ADDITIONAL ASSETS**
 
-### Files to Provide
-Please gather these items if available:
-- [ ] Logo files (PNG, SVG, AI)
-- [ ] Brand guidelines document
-- [ ] High-resolution project photos
-- [ ] Team headshots
-- [ ] Existing content/copy
-- [ ] Client testimonials
-- [ ] Certifications/awards
-- [ ] Any existing marketing materials
+### Files to Provide (Replacing Stock Images)
+**Current website uses Unsplash stock photos - please gather these items:**
+- [ ] **Company Logo** (PNG, SVG, AI files)
+- [ ] **Team Headshots** (professional photos for About page)
+- [ ] **High-resolution Project Photos** (3-5 photos per project)
+  - Before/after photos if available
+  - Detail shots of biophilic elements
+  - Wide shots showing full spaces
+- [ ] **Brand guidelines document** (if available)
+- [ ] **Hero Background Image** (optional - large, stunning project photo)
+- [ ] **Existing content/copy**
+- [ ] **Client testimonials**
+- [ ] **Certifications/awards**
+- [ ] **Marketing materials** (brochures, business cards for reference)
 
 ### Additional Notes
 **Anything else you'd like us to know about your business or website preferences?**

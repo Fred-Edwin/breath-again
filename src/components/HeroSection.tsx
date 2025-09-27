@@ -27,9 +27,9 @@ interface HeroSectionProps {
 }
 
 const defaultContent: HeroContent = {
-  headline: "Transform Your Space with Nature's Wisdom",
-  subheading: "Biophilic Design That Heals & Inspires",
-  description: "We create harmonious environments that reconnect you with nature, reduce stress, boost productivity, and enhance your overall well-being through scientifically-backed biophilic design principles.",
+  headline: "Breathe Nature Back Into Your Space",
+  subheading: "Affordable Biophilic Solutions for Healthier Urban Living",
+  description: "At Breathe Again, we design products and concepts that reconnect urban residents with nature—improving wellbeing, enhancing aesthetics, and making sustainability simple and accessible.",
   ctaButtons: [
     {
       text: "Get Started",
@@ -212,9 +212,9 @@ export default function HeroSection({ content = defaultContent, className = "" }
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-forest-900 mb-6 leading-tight"
             variants={itemVariants}
           >
-            <span className="block">Transform Your Space</span>
+            <span className="block">Breathe Nature Back</span>
             <span className="block text-transparent bg-gradient-to-r from-forest-700 via-sage-600 to-moss-600 bg-clip-text">
-              with Nature's Beauty
+              Into Your Space
             </span>
           </motion.h1>
 

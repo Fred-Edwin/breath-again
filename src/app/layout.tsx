@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Analytics from '@/components/Analytics'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import PageTransition from '@/components/animations/PageTransition'
 import StructuredData from '@/components/StructuredData'
@@ -37,6 +38,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} text-organic antialiased bg-sage-25 dark:bg-forest-900 text-forest-900 dark:text-sage-100 min-h-screen flex flex-col transition-colors duration-300`}>
+        <Analytics />
         <StructuredData data={organizationSchema} />
         <ThemeProvider>
           <Header />

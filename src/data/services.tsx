@@ -2,18 +2,18 @@ import { Service } from '@/types/services'
 
 export const servicesData: Service[] = [
   {
-    id: 'residential-design',
-    title: 'Residential Design',
-    subtitle: 'Transform Your Home into a Natural Sanctuary',
-    description: 'Create harmonious living spaces that blend natural elements with modern comfort, promoting wellness and tranquility in your daily life.',
-    shortDescription: 'Nature-inspired home design that promotes wellness and tranquility.',
+    id: 'balcony-indoor-outdoor',
+    title: 'Balcony, Indoor & Outdoor Biophilic Designs',
+    subtitle: 'Affordable Plant Modules for Urban Living',
+    description: 'Affordable, easy-to-maintain plant modules including planters, vertical gardens, and rooftop greens designed for small to medium households and apartments.',
+    shortDescription: 'Affordable plant modules for urban apartments and homes.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5v14l4-2 4 2V5L8 5z" />
       </svg>
     ),
-    href: '/services/residential-design',
+    href: '/services/balcony-indoor-outdoor',
     category: 'residential',
     featured: true,
     color: {
@@ -22,8 +22,8 @@ export const servicesData: Service[] = [
       accent: 'text-sage-600'
     },
     details: {
-      overview: 'Our residential biophilic design service transforms your home into a healing sanctuary that connects you with nature. We integrate natural materials, living elements, and organic forms to create spaces that reduce stress, improve air quality, and enhance your overall well-being.',
-      approach: 'We begin with a comprehensive assessment of your lifestyle, preferences, and space. Our team then develops a customized design plan that seamlessly integrates biophilic elements while maintaining functionality and aesthetic appeal.',
+      overview: 'Our plant module service brings nature to urban apartments and homes through affordable, easy-to-maintain vertical gardens, planters, and rooftop installations. Perfect for small to medium households looking to enhance their living spaces with greenery.',
+      approach: 'We assess your space, light conditions, and maintenance preferences to design custom plant modules that thrive in your specific environment. Our climate-resilient plant selections ensure long-lasting beauty with minimal upkeep.',
       benefits: [
         'Reduced stress and anxiety levels',
         'Improved air quality and health',
@@ -89,25 +89,25 @@ export const servicesData: Service[] = [
         }
       ],
       pricing: {
-        startingPrice: '$5,000',
-        priceRange: '$5,000 - $50,000+',
-        factors: ['Room size and complexity', 'Material selections', 'Custom features', 'Installation requirements']
+        startingPrice: 'KSH 2,500',
+        priceRange: 'KSH 2,500 - 13,000/M²',
+        factors: ['Type of installation (Vertical: KSH 2,500-13,000/M², Rooftop: KSH 5,000-10,000/M², Indoor: KSH 6,500-12,000/M²)', 'Plant selections', 'Module complexity', 'Installation requirements']
       }
     }
   },
   {
-    id: 'commercial-spaces',
-    title: 'Commercial Spaces',
-    subtitle: 'Boost Productivity with Nature-Inspired Workplaces',
-    description: 'Design productive, healthy work environments that reduce employee stress, increase creativity, and improve overall workplace satisfaction.',
-    shortDescription: 'Nature-inspired workplace design that boosts productivity and wellness.',
+    id: 'design-consultation',
+    title: 'Design Consultation',
+    subtitle: 'Professional Guidance for Urban Real Estate Projects',
+    description: 'Guidance on integrating nature into urban real estate and community projects. Perfect for residential units and small commercial spaces.',
+    shortDescription: 'Professional guidance for integrating nature into urban projects.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    href: '/services/commercial-spaces',
-    category: 'commercial',
+    href: '/services/design-consultation',
+    category: 'consultation',
     featured: true,
     color: {
       primary: 'from-forest-500 to-moss-600',
@@ -115,15 +115,15 @@ export const servicesData: Service[] = [
       accent: 'text-forest-600'
     },
     details: {
-      overview: 'Transform your workplace into a thriving environment that enhances employee well-being, productivity, and creativity through scientifically-backed biophilic design principles.',
-      approach: 'We work closely with your team to understand your company culture, workflow, and goals. Our designs integrate natural elements that support collaboration, focus, and employee satisfaction while maintaining professional aesthetics.',
+      overview: 'Our consultation service provides expert guidance for integrating biophilic design into urban real estate and community projects. We help you create nature-friendly spaces that enhance property value and resident wellbeing.',
+      approach: 'We assess your project requirements, space constraints, and goals to provide practical recommendations for incorporating nature into your development. Our focus is on cost-effective, sustainable solutions.',
       benefits: [
-        'Increased employee productivity by up to 25%',
-        'Reduced absenteeism and sick days',
-        'Enhanced creativity and problem-solving',
-        'Improved employee retention',
-        'Better air quality and acoustics',
-        'Strengthened company culture and brand'
+        'Increased property value through biophilic design',
+        'Enhanced resident satisfaction and wellbeing',
+        'Cost-effective nature integration strategies',
+        'Sustainable development guidance',
+        'Climate-resilient design recommendations',
+        'Professional expertise and planning support'
       ],
       features: [
         {
@@ -182,25 +182,25 @@ export const servicesData: Service[] = [
         }
       ],
       pricing: {
-        startingPrice: '$15,000',
-        priceRange: '$15,000 - $200,000+',
-        factors: ['Office size and layout', 'Complexity of installations', 'Custom features', 'Phasing requirements']
+        startingPrice: 'KSH 3,500',
+        priceRange: 'KSH 3,500 - 16,500',
+        factors: ['Project size and complexity', 'Consultation duration', 'Site visits required', 'Documentation needs']
       }
     }
   },
   {
-    id: 'consultation',
-    title: 'Design Consultation',
-    subtitle: 'Expert Guidance for Your Biophilic Journey',
-    description: 'Get professional advice and strategic planning to implement biophilic design principles in any space, with flexible consultation options.',
-    shortDescription: 'Professional guidance and strategic planning for biophilic design.',
+    id: 'biophilic-installations',
+    title: 'Biophilic Concept Installations',
+    subtitle: 'Small-Scale Public Green Spaces',
+    description: 'Small-scale public or semi-public biophilic monuments and green spaces for schools, cafés, restaurants, and wellness spaces.',
+    shortDescription: 'Small-scale biophilic installations for public and commercial spaces.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    href: '/services/consultation',
-    category: 'consultation',
+    href: '/services/biophilic-installations',
+    category: 'wellness',
     featured: true,
     color: {
       primary: 'from-moss-500 to-sage-600',
@@ -208,15 +208,15 @@ export const servicesData: Service[] = [
       accent: 'text-moss-600'
     },
     details: {
-      overview: 'Our consultation service provides expert guidance for implementing biophilic design principles in your space. Whether you\'re planning a major renovation or looking for simple improvements, we offer flexible consultation options to meet your needs.',
-      approach: 'We provide personalized advice based on your specific space, budget, and goals. Our consultations can range from strategic planning sessions to hands-on design guidance, all tailored to your unique situation.',
+      overview: 'We create small-scale biophilic installations and green monuments for public and semi-public spaces. Perfect for schools, cafés, restaurants, and wellness centers looking to enhance their environment with meaningful nature connections.',
+      approach: 'We design and install custom biophilic features that serve as focal points and gathering spaces. Each installation is tailored to the specific context, user needs, and maintenance capabilities of the space.',
       benefits: [
-        'Expert guidance from certified professionals',
-        'Cost-effective design solutions',
-        'Flexible consultation formats',
-        'Customized recommendations',
-        'Implementation roadmap',
-        'Ongoing support and advice'
+        'Enhanced public space aesthetics',
+        'Community gathering and wellness focus',
+        'Low-maintenance sustainable design',
+        'Climate-resilient plant selections',
+        'Custom design for unique spaces',
+        'Professional installation and setup'
       ],
       features: [
         {
@@ -275,9 +275,9 @@ export const servicesData: Service[] = [
         }
       ],
       pricing: {
-        startingPrice: '$250',
-        priceRange: '$250 - $2,500',
-        factors: ['Consultation duration', 'Complexity of project', 'Documentation requirements', 'Follow-up sessions needed']
+        startingPrice: 'KSH 4,000',
+        priceRange: 'KSH 4,000 - 12,000',
+        factors: ['Installation size and complexity', 'Plant selections and materials', 'Site preparation requirements', 'Maintenance setup']
       }
     }
   }

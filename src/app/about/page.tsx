@@ -28,13 +28,13 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-forest-600 mb-4 leading-relaxed">
-                In today&apos;s fast-paced world, we&apos;ve become increasingly disconnected from the natural environment that sustains us. 
-                Our mission is to reintegrate nature into our daily lives through thoughtful, biophilic design that promotes health, 
-                well-being, and environmental sustainability.
+                Breathe Again was founded to address the lack of accessible, restorative green spaces in African cities.
+                Starting as a fellowship project under BeVisioneers: The Mercedes-Benz Fellowship, it aims to bring scalable
+                biophilic solutions into homes, communities, and public spaces.
               </p>
               <p className="text-lg text-forest-600 leading-relaxed">
-                Every space we design is an opportunity to create a sanctuary—a place where you can truly breathe again, 
-                reconnect with your natural rhythms, and find peace in the harmony between built and natural environments.
+                To make nature an accessible, affordable, and integral part of urban living through innovative,
+                climate-resilient biophilic solutions.
               </p>
             </div>
             <div className="bg-sage-50 rounded-2xl p-8">
@@ -42,15 +42,15 @@ export default function About() {
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-forest-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Well-being First</h3>
-                    <p className="text-forest-600">Designs that prioritize mental and physical health through natural elements.</p>
+                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Growth</h3>
+                    <p className="text-forest-600">Continuous improvement and expansion of our biophilic solutions.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-moss-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,20 +58,44 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Sustainable Practice</h3>
-                    <p className="text-forest-600">Eco-conscious materials and methods that respect our planet.</p>
+                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Sustainability</h3>
+                    <p className="text-forest-600">Climate-resilient plants and sustainable materials for lasting impact.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-earth-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Innovation</h3>
-                    <p className="text-forest-600">Cutting-edge biophilic principles meet timeless natural beauty.</p>
+                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Community</h3>
+                    <p className="text-forest-600">Building stronger communities through shared green spaces.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Creativity</h3>
+                    <p className="text-forest-600">Innovative approaches to integrating nature in urban environments.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-forest-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-forest-900 mb-2">Wellbeing</h3>
+                    <p className="text-forest-600">Prioritizing mental and physical health through natural design.</p>
                   </div>
                 </div>
               </div>
@@ -88,35 +112,20 @@ export default function About() {
               Our Team
             </h2>
             <p className="text-lg text-forest-600 max-w-2xl mx-auto">
-              A passionate group of designers, architects, and sustainability experts dedicated to creating beautiful, healthy spaces.
+              Founded by Purity Wanjira Waweru, a passionate advocate for accessible biophilic design in urban Africa.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Sarah Chen",
-                role: "Founder & Lead Designer",
-                description: "With over 15 years in biophilic design, Sarah brings nature to life in every space she touches.",
-              },
-              {
-                name: "Marcus Johnson",
-                role: "Sustainability Director",
-                description: "Marcus ensures every project meets the highest environmental standards while maintaining aesthetic excellence.",
-              },
-              {
-                name: "Elena Rodriguez",
-                role: "Wellness Consultant",
-                description: "Elena specializes in creating spaces that promote mental health and overall well-being through natural design.",
-              },
-            ].map((member, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
-                <div className="w-20 h-20 bg-gradient-to-br from-sage-200 to-moss-200 rounded-full mx-auto mb-4"></div>
-                <h3 className="text-xl font-semibold text-forest-900 text-center mb-2">{member.name}</h3>
-                <p className="text-sage-600 text-center font-medium mb-3">{member.role}</p>
-                <p className="text-forest-600 text-center leading-relaxed">{member.description}</p>
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 max-w-md">
+              <div className="w-20 h-20 bg-gradient-to-br from-sage-200 to-moss-200 rounded-full mx-auto mb-4"></div>
+              <h3 className="text-xl font-semibold text-forest-900 text-center mb-2">Purity Wanjira Waweru</h3>
+              <p className="text-sage-600 text-center font-medium mb-3">Founder & CEO</p>
+              <p className="text-forest-600 text-center leading-relaxed">
+                Passionate advocate for accessible biophilic design in urban Africa, bringing nature-based solutions
+                to cities through the BeVisioneers Fellowship program.
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -264,10 +264,10 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     {/* Action Buttons */}
                     <div className="space-y-3">
                       <Link
-                        href={project.href}
+                        href="/contact"
                         className="block w-full bg-forest-700 text-sage-50 text-center py-3 px-6 rounded-xl font-semibold hover:bg-forest-800 transition-colors"
                       >
-                        View Full Project Details
+                        Request This Service
                       </Link>
                       
                       <div className="grid grid-cols-2 gap-3">

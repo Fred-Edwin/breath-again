@@ -18,12 +18,12 @@ export interface SEOProps {
 
 const defaultSEO = {
   siteName: 'Breathe Again - Biophilic Design Studio',
-  siteUrl: process.env.NODE_ENV === 'production' 
-    ? 'https://breatheagain.design' 
+  siteUrl: process.env.NODE_ENV === 'production'
+    ? 'https://breath-again.vercel.app'
     : 'http://localhost:3000',
   defaultTitle: 'Breathe Again - Biophilic Design Studio',
   defaultDescription: 'Transform your space with nature-inspired biophilic design. We create harmonious environments that reduce stress, boost productivity, and enhance well-being through sustainable, science-backed design principles.',
-  defaultImage: '/images/og-image.jpg', // We'll create this
+  defaultImage: '/logo.jpg',
   defaultKeywords: [
     'biophilic design',
     'nature-inspired interior design',
@@ -71,6 +71,9 @@ export function generateMetadata({
   }
 
   const metadata: Metadata = {
+    // MetadataBase for proper URL resolution
+    metadataBase: new URL(defaultSEO.siteUrl),
+
     // Basic Meta Tags
     title: seo.title,
     description: seo.description,
@@ -78,7 +81,7 @@ export function generateMetadata({
     authors: [{ name: author || defaultSEO.author }],
     creator: defaultSEO.author,
     publisher: defaultSEO.author,
-    
+
     // Language and Locale
     alternates: {
       canonical: seo.canonical,
