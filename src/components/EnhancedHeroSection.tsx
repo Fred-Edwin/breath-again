@@ -73,7 +73,7 @@ export default function EnhancedHeroSection({
       y: 0,
       transition: {
         duration: animationConfig.enabled ? 0.8 : 0.01,
-        ease: [0, 0, 0.2, 1]
+        ease: [0, 0, 0.2, 1] as [number, number, number, number]
       }
     }
   }

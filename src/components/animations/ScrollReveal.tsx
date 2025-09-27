@@ -63,7 +63,7 @@ export default function ScrollReveal({
 
   return (
     <motion.div
-      ref={ref}
+      ref={ref as React.RefObject<HTMLDivElement>}
       className={className}
       initial="hidden"
       animate={isVisible ? 'visible' : 'hidden'}

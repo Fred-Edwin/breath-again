@@ -34,9 +34,9 @@ export function useAnimationConfig() {
     delay: prefersReducedMotion ? 0 : 0.1,
     enabled: !prefersReducedMotion,
     transition: {
-      type: 'tween',
+      type: 'tween' as const,
       duration: prefersReducedMotion ? 0.01 : 0.6,
-      ease: [0, 0, 0.2, 1]
+      ease: [0, 0, 0.2, 1] as [number, number, number, number]
     }
   }
 }
