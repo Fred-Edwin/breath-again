@@ -31,42 +31,42 @@ export interface NewsletterData {
   interests: string[]
 }
 
-export type ProjectType = 
-  | 'residential' 
-  | 'commercial' 
-  | 'hospitality' 
-  | 'wellness' 
-  | 'landscape' 
+export type ProjectType =
+  | 'residential'
+  | 'commercial'
+  | 'hospitality'
+  | 'wellness'
+  | 'landscape'
   | 'consultation'
 
-export type BudgetRange = 
-  | 'under-10k' 
-  | '10k-25k' 
-  | '25k-50k' 
-  | '50k-100k' 
-  | '100k-250k' 
-  | '250k-plus' 
+export type BudgetRange =
+  | 'under-10k'
+  | '10k-25k'
+  | '25k-50k'
+  | '50k-100k'
+  | '100k-250k'
+  | '250k-plus'
   | 'consultation'
 
-export type Timeline = 
-  | 'asap' 
-  | '1-3months' 
-  | '3-6months' 
-  | '6-12months' 
-  | '12months-plus' 
+export type Timeline =
+  | 'asap'
+  | '1-3months'
+  | '3-6months'
+  | '6-12months'
+  | '12months-plus'
   | 'flexible'
 
-export type SpaceType = 
-  | 'home-office' 
-  | 'living-room' 
-  | 'bedroom' 
-  | 'kitchen' 
-  | 'entire-home' 
-  | 'office-space' 
-  | 'retail' 
-  | 'restaurant' 
-  | 'hotel' 
-  | 'healthcare' 
+export type SpaceType =
+  | 'home-office'
+  | 'living-room'
+  | 'bedroom'
+  | 'kitchen'
+  | 'entire-home'
+  | 'office-space'
+  | 'retail'
+  | 'restaurant'
+  | 'hotel'
+  | 'healthcare'
   | 'other'
 
 export interface FormErrors {

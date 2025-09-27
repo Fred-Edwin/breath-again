@@ -1,4 +1,9 @@
-import { ContactFormData, ProjectInquiryData, NewsletterData, FormErrors } from '@/types/contact'
+import {
+  ContactFormData,
+  ProjectInquiryData,
+  NewsletterData,
+  FormErrors,
+} from '@/types/contact'
 
 export const validateEmail = (email: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -42,7 +47,9 @@ export const validateContactForm = (data: ContactFormData): FormErrors => {
   return errors
 }
 
-export const validateProjectInquiry = (data: ProjectInquiryData): FormErrors => {
+export const validateProjectInquiry = (
+  data: ProjectInquiryData
+): FormErrors => {
   const errors: FormErrors = {}
 
   if (!data.name.trim()) {

@@ -2,35 +2,40 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { PortfolioGridProps, Project } from '@/types/portfolio'
+import { PortfolioGridProps } from '@/types/portfolio'
 import ProjectCard from './ProjectCard'
 
 export default function PortfolioGrid({
   projects,
   filterState,
   onProjectClick,
-  className = ""
+  className = '',
 }: PortfolioGridProps) {
-  const [viewMode, setViewMode] = useState<'masonry' | 'grid' | 'list'>('masonry')
+  const [viewMode, setViewMode] = useState<'masonry' | 'grid' | 'list'>(
+    'masonry'
+  )
 
   // Filter projects based on filter state
-  const filteredProjects = projects.filter(project => {
+  const filteredProjects = projects.filter((project) => {
     // Category filter
-    if (filterState.category !== 'all' && project.category !== filterState.category) {
+    if (
+      filterState.category !== 'all' &&
+      project.category !== filterState.category
+    ) {
       return false
     }
 
     // Search filter
     if (filterState.searchTerm) {
       const searchTerm = filterState.searchTerm.toLowerCase()
-      const matchesSearch = 
+      const matchesSearch =
         project.title.toLowerCase().includes(searchTerm) ||
         project.description.toLowerCase().includes(searchTerm) ||
         project.shortDescription.toLowerCase().includes(searchTerm) ||
-        project.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+        project.tags.some((tag) => tag.toLowerCase().includes(searchTerm)) ||
         project.location.toLowerCase().includes(searchTerm) ||
         project.client?.toLowerCase().includes(searchTerm)
-      
+
       if (!matchesSearch) return false
     }
 
@@ -43,9 +48,9 @@ export default function PortfolioGrid({
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   }
 
   const getGridClasses = () => {
@@ -66,7 +71,7 @@ export default function PortfolioGrid({
       {[
         { mode: 'masonry' as const, icon: '⊞', label: 'Masonry' },
         { mode: 'grid' as const, icon: '⊡', label: 'Grid' },
-        { mode: 'list' as const, icon: '☰', label: 'List' }
+        { mode: 'list' as const, icon: '☰', label: 'List' },
       ].map(({ mode, icon, label }) => (
         <button
           key={mode}
@@ -97,15 +102,13 @@ export default function PortfolioGrid({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            {filteredProjects.length === 0 ? (
-              'No services found'
-            ) : filteredProjects.length === 1 ? (
-              '1 service'
-            ) : (
-              `${filteredProjects.length} services`
-            )}
+            {filteredProjects.length === 0
+              ? 'No services found'
+              : filteredProjects.length === 1
+                ? '1 service'
+                : `${filteredProjects.length} services`}
           </motion.h2>
-          
+
           {filterState.searchTerm && (
             <motion.span
               className="text-sm text-forest-600"
@@ -113,11 +116,11 @@ export default function PortfolioGrid({
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3 }}
             >
-              for "{filterState.searchTerm}"
+              for &quot;{filterState.searchTerm}&quot;
             </motion.span>
           )}
         </div>
-        
+
         <ViewToggle />
       </div>
 
@@ -130,13 +133,26 @@ export default function PortfolioGrid({
           transition={{ duration: 0.5 }}
         >
           <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <svg
+              className="w-8 h-8 text-forest-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
             </svg>
           </div>
-          <h3 className="text-xl font-semibold text-forest-900 mb-2">No services found</h3>
+          <h3 className="text-xl font-semibold text-forest-900 mb-2">
+            No services found
+          </h3>
           <p className="text-forest-600 mb-6">
-            Try adjusting your search terms or category filters to see more results.
+            Try adjusting your search terms or category filters to see more
+            results.
           </p>
           <motion.button
             onClick={() => window.location.reload()}
@@ -169,7 +185,7 @@ export default function PortfolioGrid({
                 transition={{
                   duration: 0.4,
                   delay: index * 0.05,
-                  ease: [0.25, 0.25, 0.25, 0.75]
+                  ease: [0.25, 0.25, 0.25, 0.75],
                 }}
                 className={viewMode === 'masonry' ? 'break-inside-avoid' : ''}
               >

@@ -17,13 +17,13 @@ export default function ParallaxContainer({
   speed = 0.3,
   direction = 'up',
   className = '',
-  style = {}
+  style = {},
 }: ParallaxContainerProps) {
   const prefersReducedMotion = useReducedMotion()
-  const { transform } = useParallax({ 
-    speed, 
-    direction, 
-    disabled: prefersReducedMotion 
+  const { transform } = useParallax({
+    speed,
+    direction,
+    disabled: prefersReducedMotion,
   })
 
   return (
@@ -32,7 +32,7 @@ export default function ParallaxContainer({
       style={{
         transform,
         willChange: prefersReducedMotion ? 'auto' : 'transform',
-        ...style
+        ...style,
       }}
     >
       {children}

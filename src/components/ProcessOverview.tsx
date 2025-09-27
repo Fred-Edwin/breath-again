@@ -3,63 +3,50 @@
 import { motion } from 'framer-motion'
 import { ProcessOverviewProps } from '@/types/services'
 import { generalProcess } from '@/data/services'
+import {
+  EASING,
+  TRANSITIONS,
+  createStaggerContainer,
+  createFadeUpVariants,
+} from '../utils/animations'
 
 export default function ProcessOverview({
-  title = "Our Design Process",
-  subtitle = "A collaborative approach that ensures every project reflects your vision while maximizing the benefits of biophilic design",
+  title = 'Our Design Process',
+  subtitle = 'A collaborative approach that ensures every project reflects your vision while maximizing the benefits of biophilic design',
   steps = generalProcess,
-  className = ""
+  className = '',
 }: ProcessOverviewProps) {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
-  }
+  const containerVariants = createStaggerContainer(0.2)
 
   const stepVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       x: -30,
-      scale: 0.95
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
       x: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
-        ease: [0, 0, 0.2, 1]
-      }
-    }
+        ...TRANSITIONS.medium,
+      },
+    },
   }
 
-  const titleVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0, 0, 0.2, 1]
-      }
-    }
-  }
+  const titleVariants = createFadeUpVariants(0.6)
 
   const connectionLineVariants = {
     hidden: { scaleX: 0 },
     visible: {
       scaleX: 1,
       transition: {
+        type: 'tween' as const,
         duration: 0.8,
         delay: 0.5,
-        ease: [0.4, 0, 0.2, 1]
-      }
-    }
+        ease: EASING.easeInOut,
+      },
+    },
   }
 
   return (
@@ -71,7 +58,7 @@ export default function ProcessOverview({
           variants={titleVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-forest-900 mb-6">
             {title}
@@ -87,7 +74,7 @@ export default function ProcessOverview({
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           {/* Connection Line - Desktop */}
           <motion.div
@@ -111,9 +98,9 @@ export default function ProcessOverview({
                   {/* Step Number */}
                   <motion.div
                     className="w-16 h-16 bg-gradient-to-br from-forest-600 to-sage-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto group-hover:shadow-lg transition-shadow duration-300"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
-                      rotate: 5
+                      rotate: 5,
                     }}
                     transition={{ duration: 0.3 }}
                   >
@@ -125,15 +112,25 @@ export default function ProcessOverview({
                     <h3 className="text-xl font-serif font-bold text-forest-900 mb-3 group-hover:text-forest-700 transition-colors duration-300">
                       {step.title}
                     </h3>
-                    
+
                     <p className="text-forest-600 leading-relaxed mb-4">
                       {step.description}
                     </p>
 
                     {step.duration && (
                       <div className="inline-flex items-center text-sm text-sage-600 bg-sage-100 px-3 py-1 rounded-full">
-                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg
+                          className="w-4 h-4 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
                         </svg>
                         {step.duration}
                       </div>
@@ -150,7 +147,7 @@ export default function ProcessOverview({
                       duration: 3,
                       repeat: Infinity,
                       delay: index * 0.5,
-                      ease: [0.4, 0, 0.2, 1]
+                      ease: EASING.easeInOut,
                     }}
                   />
                 </div>
@@ -164,8 +161,18 @@ export default function ProcessOverview({
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.2 + 0.8, duration: 0.4 }}
                   >
-                    <svg className="w-6 h-6 text-sage-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    <svg
+                      className="w-6 h-6 text-sage-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                      />
                     </svg>
                   </motion.div>
                 )}
@@ -192,8 +199,18 @@ export default function ProcessOverview({
             whileTap={{ scale: 0.95 }}
           >
             Begin Your Project
-            <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="ml-3 w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </motion.a>
         </motion.div>

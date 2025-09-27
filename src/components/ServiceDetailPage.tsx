@@ -4,34 +4,20 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Service } from '@/types/services'
 import ProcessOverview from './ProcessOverview'
+import {
+  TRANSITIONS,
+  createStaggerContainer,
+  createFadeUpVariants,
+} from '../utils/animations'
 
 interface ServiceDetailPageProps {
   service: Service
 }
 
 export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  }
+  const containerVariants = createStaggerContainer(0.1)
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0, 0, 0.2, 1]
-      }
-    }
-  }
+  const itemVariants = createFadeUpVariants(0.6)
 
   const featureVariants = {
     hidden: { opacity: 0, x: -30 },
@@ -40,16 +26,17 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
       x: 0,
       transition: {
         delay: index * 0.1,
-        duration: 0.6,
-        ease: [0, 0, 0.2, 1]
-      }
-    })
+        ...TRANSITIONS.medium,
+      },
+    }),
   }
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className={`relative py-20 md:py-32 bg-gradient-to-br ${service.color.primary} text-white overflow-hidden`}>
+      <section
+        className={`relative py-20 md:py-32 bg-gradient-to-br ${service.color.primary} text-white overflow-hidden`}
+      >
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -64,9 +51,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-white scale-125">
-                {service.icon}
-              </div>
+              <div className="text-white scale-125">{service.icon}</div>
             </motion.div>
 
             <motion.h1
@@ -149,10 +134,22 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.4 }}
                   >
-                    <svg className="w-6 h-6 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-6 h-6 text-sage-500 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
-                    <span className="text-forest-700 leading-relaxed">{benefit}</span>
+                    <span className="text-forest-700 leading-relaxed">
+                      {benefit}
+                    </span>
                   </motion.li>
                 ))}
               </ul>
@@ -172,10 +169,11 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 mb-4">
-              What's Included
+              What&apos;s Included
             </h2>
             <p className="text-lg text-forest-600 max-w-2xl mx-auto">
-              Our comprehensive approach ensures every aspect of your space contributes to your well-being.
+              Our comprehensive approach ensures every aspect of your space
+              contributes to your well-being.
             </p>
           </motion.div>
 
@@ -223,7 +221,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 mb-6">
                 Investment & Pricing
               </h2>
-              
+
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 mb-8">
                 <div className="text-center mb-6">
                   <div className="text-4xl font-bold text-forest-800 mb-2">
@@ -240,9 +238,22 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
                   </h4>
                   <ul className="space-y-2">
                     {service.details.pricing.factors?.map((factor, index) => (
-                      <li key={index} className="flex items-center text-forest-600">
-                        <svg className="w-4 h-4 text-sage-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li
+                        key={index}
+                        className="flex items-center text-forest-600"
+                      >
+                        <svg
+                          className="w-4 h-4 text-sage-500 mr-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
                         </svg>
                         {factor}
                       </li>
@@ -252,7 +263,8 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
               </div>
 
               <p className="text-forest-600 mb-8">
-                Every project is unique. Contact us for a personalized quote based on your specific needs and vision.
+                Every project is unique. Contact us for a personalized quote
+                based on your specific needs and vision.
               </p>
 
               <Link
@@ -260,8 +272,18 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
                 className="inline-flex items-center bg-forest-700 text-sage-50 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-forest-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Your Quote
-                <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="ml-3 w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
             </motion.div>
@@ -282,7 +304,8 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
               Ready to Transform Your Space?
             </h2>
             <p className="text-lg text-sage-200 mb-8 max-w-2xl mx-auto">
-              Let's discuss how {service.title.toLowerCase()} can enhance your environment and well-being.
+              Let&apos;s discuss how {service.title.toLowerCase()} can enhance
+              your environment and well-being.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

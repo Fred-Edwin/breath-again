@@ -47,7 +47,12 @@ export interface Service {
   shortDescription: string
   icon: React.ReactNode
   href: string
-  category: 'residential' | 'commercial' | 'consultation' | 'wellness' | 'landscape'
+  category:
+    | 'residential'
+    | 'commercial'
+    | 'consultation'
+    | 'wellness'
+    | 'landscape'
   featured: boolean
   color: {
     primary: string

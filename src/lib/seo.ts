@@ -18,11 +18,13 @@ export interface SEOProps {
 
 const defaultSEO = {
   siteName: 'Breathe Again - Biophilic Design Studio',
-  siteUrl: process.env.NODE_ENV === 'production'
-    ? 'https://breath-again.vercel.app'
-    : 'http://localhost:3000',
+  siteUrl:
+    process.env.NODE_ENV === 'production'
+      ? 'https://breath-again.vercel.app'
+      : 'http://localhost:3000',
   defaultTitle: 'Breathe Again - Biophilic Design Studio',
-  defaultDescription: 'Transform your space with nature-inspired biophilic design. We create harmonious environments that reduce stress, boost productivity, and enhance well-being through sustainable, science-backed design principles.',
+  defaultDescription:
+    'Transform your space with nature-inspired biophilic design. We create harmonious environments that reduce stress, boost productivity, and enhance well-being through sustainable, science-backed design principles.',
   defaultImage: '/logo.jpg',
   defaultKeywords: [
     'biophilic design',
@@ -36,14 +38,14 @@ const defaultSEO = {
     'productivity workspace',
     'eco-friendly interiors',
     'plant-based design',
-    'organic architecture'
+    'organic architecture',
   ],
   author: 'Breathe Again Design Studio',
   twitterHandle: '@breatheagain', // Update with actual handle
   facebookAppId: '', // Add if available
   language: 'en-US',
   locale: 'en_US',
-  country: 'US'
+  country: 'US',
 }
 
 export function generateMetadata({
@@ -59,15 +61,18 @@ export function generateMetadata({
   section,
   tags = [],
   noindex = false,
-  canonical
+  canonical,
 }: SEOProps = {}): Metadata {
   const seo = {
-    title: title ? `${title} | ${defaultSEO.siteName}` : defaultSEO.defaultTitle,
+    title: title
+      ? `${title} | ${defaultSEO.siteName}`
+      : defaultSEO.defaultTitle,
     description: description || defaultSEO.defaultDescription,
     keywords: [...defaultSEO.defaultKeywords, ...keywords].join(', '),
     image: image || defaultSEO.defaultImage,
     url: url ? `${defaultSEO.siteUrl}${url}` : defaultSEO.siteUrl,
-    canonical: canonical || (url ? `${defaultSEO.siteUrl}${url}` : defaultSEO.siteUrl)
+    canonical:
+      canonical || (url ? `${defaultSEO.siteUrl}${url}` : defaultSEO.siteUrl),
   }
 
   const metadata: Metadata = {
@@ -86,10 +91,10 @@ export function generateMetadata({
     alternates: {
       canonical: seo.canonical,
       languages: {
-        'en-US': seo.url
-      }
+        'en-US': seo.url,
+      },
     },
-    
+
     // Robots
     robots: {
       index: !noindex,
@@ -116,14 +121,14 @@ export function generateMetadata({
           width: 1200,
           height: 630,
           alt: title || defaultSEO.defaultTitle,
-          type: 'image/jpeg'
-        }
+          type: 'image/jpeg',
+        },
       ],
       locale: defaultSEO.locale,
       ...(publishedTime && { publishedTime }),
       ...(modifiedTime && { modifiedTime }),
       ...(section && { section }),
-      ...(tags.length > 0 && { tags })
+      ...(tags.length > 0 && { tags }),
     },
 
     // Twitter
@@ -133,7 +138,7 @@ export function generateMetadata({
       creator: defaultSEO.twitterHandle,
       title: title || defaultSEO.defaultTitle,
       description: seo.description,
-      images: [seo.image]
+      images: [seo.image],
     },
 
     // Additional Meta Tags
@@ -146,13 +151,15 @@ export function generateMetadata({
       'apple-mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'default',
       'mobile-web-app-capable': 'yes',
-      'HandheldFriendly': 'True',
-      'MobileOptimized': '320',
+      HandheldFriendly: 'True',
+      MobileOptimized: '320',
       'format-detection': 'telephone=no',
       'google-site-verification': '', // Add Google Search Console verification
       'facebook-domain-verification': '', // Add Facebook domain verification
-      ...(defaultSEO.facebookAppId && { 'fb:app_id': defaultSEO.facebookAppId })
-    }
+      ...(defaultSEO.facebookAppId && {
+        'fb:app_id': defaultSEO.facebookAppId,
+      }),
+    },
   }
 
   return metadata
@@ -162,34 +169,61 @@ export function generateMetadata({
 export const pageSEO = {
   home: {
     title: 'Transform Your Space with Biophilic Design',
-    description: 'Create harmonious environments that reconnect you with nature. Expert biophilic design services for residential, commercial, and wellness spaces. Reduce stress, boost productivity, enhance well-being.',
-    keywords: ['biophilic design services', 'nature-inspired home design', 'wellness space design', 'sustainable interior design'],
-    url: '/'
+    description:
+      'Create harmonious environments that reconnect you with nature. Expert biophilic design services for residential, commercial, and wellness spaces. Reduce stress, boost productivity, enhance well-being.',
+    keywords: [
+      'biophilic design services',
+      'nature-inspired home design',
+      'wellness space design',
+      'sustainable interior design',
+    ],
+    url: '/',
   },
   about: {
     title: 'About Our Biophilic Design Philosophy',
-    description: 'Meet our team of biophilic design experts. Learn about our nature-inspired design philosophy and sustainable approach to creating healthier, more productive spaces.',
-    keywords: ['biophilic design team', 'sustainable design philosophy', 'nature-inspired designers'],
-    url: '/about'
+    description:
+      'Meet our team of biophilic design experts. Learn about our nature-inspired design philosophy and sustainable approach to creating healthier, more productive spaces.',
+    keywords: [
+      'biophilic design team',
+      'sustainable design philosophy',
+      'nature-inspired designers',
+    ],
+    url: '/about',
   },
   services: {
     title: 'Biophilic Design Services - Residential, Commercial & Wellness',
-    description: 'Professional biophilic design services including interior design, landscape architecture, and wellness space consultation. Transform any space with nature-inspired solutions.',
-    keywords: ['biophilic interior design', 'commercial biophilic design', 'wellness space design', 'landscape architecture'],
-    url: '/services'
+    description:
+      'Professional biophilic design services including interior design, landscape architecture, and wellness space consultation. Transform any space with nature-inspired solutions.',
+    keywords: [
+      'biophilic interior design',
+      'commercial biophilic design',
+      'wellness space design',
+      'landscape architecture',
+    ],
+    url: '/services',
   },
   portfolio: {
     title: 'Biophilic Design Portfolio - Completed Projects',
-    description: 'Explore our portfolio of completed biophilic design projects. See how we\'ve transformed residential, commercial, and wellness spaces with nature-inspired design.',
-    keywords: ['biophilic design portfolio', 'nature-inspired project gallery', 'sustainable design examples'],
-    url: '/portfolio'
+    description:
+      "Explore our portfolio of completed biophilic design projects. See how we've transformed residential, commercial, and wellness spaces with nature-inspired design.",
+    keywords: [
+      'biophilic design portfolio',
+      'nature-inspired project gallery',
+      'sustainable design examples',
+    ],
+    url: '/portfolio',
   },
   contact: {
     title: 'Contact Us - Start Your Biophilic Design Project',
-    description: 'Ready to transform your space? Contact our biophilic design experts for a consultation. Serving residential, commercial, and wellness projects nationwide.',
-    keywords: ['biophilic design consultation', 'contact nature designers', 'sustainable design services'],
-    url: '/contact'
-  }
+    description:
+      'Ready to transform your space? Contact our biophilic design experts for a consultation. Serving residential, commercial, and wellness projects nationwide.',
+    keywords: [
+      'biophilic design consultation',
+      'contact nature designers',
+      'sustainable design services',
+    ],
+    url: '/contact',
+  },
 }
 
 // Structured Data Schemas
@@ -205,13 +239,13 @@ export const organizationSchema = {
     'https://instagram.com/breatheagaindesign', // Update with actual URLs
     'https://facebook.com/breatheagaindesign',
     'https://linkedin.com/company/breatheagaindesign',
-    'https://pinterest.com/breatheagaindesign'
+    'https://pinterest.com/breatheagaindesign',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+1-555-123-4567', // Update with actual phone
     contactType: 'customer service',
-    availableLanguage: 'English'
+    availableLanguage: 'English',
   },
   address: {
     '@type': 'PostalAddress',
@@ -219,15 +253,15 @@ export const organizationSchema = {
     addressLocality: 'Nature District',
     addressRegion: 'ND',
     postalCode: '12345',
-    addressCountry: 'US'
+    addressCountry: 'US',
   },
   priceRange: '$$',
   openingHours: 'Mo-Fr 09:00-18:00',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
-    reviewCount: '47'
-  }
+    reviewCount: '47',
+  },
 }
 
 export const serviceSchema = (service: {
@@ -243,14 +277,14 @@ export const serviceSchema = (service: {
   provider: {
     '@type': 'Organization',
     name: defaultSEO.siteName,
-    url: defaultSEO.siteUrl
+    url: defaultSEO.siteUrl,
   },
   url: `${defaultSEO.siteUrl}${service.url}`,
   ...(service.price && { price: service.price }),
   areaServed: {
     '@type': 'Country',
-    name: 'United States'
-  }
+    name: 'United States',
+  },
 })
 
 export const projectSchema = (project: {
@@ -269,13 +303,13 @@ export const projectSchema = (project: {
   dateCreated: project.dateCompleted,
   creator: {
     '@type': 'Organization',
-    name: defaultSEO.siteName
+    name: defaultSEO.siteName,
   },
   genre: project.category,
-  ...(project.location && { 
+  ...(project.location && {
     locationCreated: {
       '@type': 'Place',
-      name: project.location
-    }
-  })
+      name: project.location,
+    },
+  }),
 })

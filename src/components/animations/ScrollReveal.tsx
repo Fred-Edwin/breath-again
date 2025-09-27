@@ -18,28 +18,28 @@ const getVariants = (direction: string, distance: number) => {
   const variants: Record<string, any> = {
     up: {
       hidden: { opacity: 0, y: distance },
-      visible: { opacity: 1, y: 0 }
+      visible: { opacity: 1, y: 0 },
     },
     down: {
       hidden: { opacity: 0, y: -distance },
-      visible: { opacity: 1, y: 0 }
+      visible: { opacity: 1, y: 0 },
     },
     left: {
       hidden: { opacity: 0, x: distance },
-      visible: { opacity: 1, x: 0 }
+      visible: { opacity: 1, x: 0 },
     },
     right: {
       hidden: { opacity: 0, x: -distance },
-      visible: { opacity: 1, x: 0 }
+      visible: { opacity: 1, x: 0 },
     },
     scale: {
       hidden: { opacity: 0, scale: 0.8 },
-      visible: { opacity: 1, scale: 1 }
+      visible: { opacity: 1, scale: 1 },
     },
     fade: {
       hidden: { opacity: 0 },
-      visible: { opacity: 1 }
-    }
+      visible: { opacity: 1 },
+    },
   }
 
   return variants[direction] || variants.up
@@ -51,13 +51,13 @@ export default function ScrollReveal({
   delay = 0,
   duration,
   distance = 50,
-  className = ''
+  className = '',
 }: ScrollRevealProps) {
   const { ref, isVisible } = useScrollAnimation({
     threshold: 0.1,
-    rootMargin: '-10% 0px'
+    rootMargin: '-10% 0px',
   })
-  
+
   const animationConfig = useAnimationConfig()
   const variants = getVariants(direction, distance)
 
@@ -71,7 +71,7 @@ export default function ScrollReveal({
       transition={{
         ...animationConfig.transition,
         duration: duration || animationConfig.duration,
-        delay: delay + animationConfig.delay
+        delay: delay + animationConfig.delay,
       }}
     >
       {children}

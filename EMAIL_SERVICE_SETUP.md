@@ -5,8 +5,9 @@ This guide explains how to set up email functionality for the Breath-Again conta
 ## Overview
 
 The contact system includes three main forms:
+
 1. **Contact Form** - Quick contact with basic information
-2. **Project Inquiry Form** - Detailed 4-step questionnaire 
+2. **Project Inquiry Form** - Detailed 4-step questionnaire
 3. **Newsletter Signup** - Email subscription with preferences
 
 ## Quick Setup Options
@@ -22,10 +23,11 @@ The contact system includes three main forms:
    - Copy each form endpoint URL
 
 3. **Add Environment Variables**
+
    ```bash
    # Add to .env.local
    NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/your-contact-form-id
-   NEXT_PUBLIC_PROJECT_INQUIRY_ENDPOINT=https://formspree.io/f/your-inquiry-form-id  
+   NEXT_PUBLIC_PROJECT_INQUIRY_ENDPOINT=https://formspree.io/f/your-inquiry-form-id
    NEXT_PUBLIC_NEWSLETTER_ENDPOINT=https://formspree.io/f/your-newsletter-form-id
    ```
 
@@ -43,6 +45,7 @@ The contact system includes three main forms:
    - Deploy the site
 
 2. **Add Environment Variable**
+
    ```bash
    NEXT_PUBLIC_NETLIFY_FORMS=true
    ```
@@ -54,6 +57,7 @@ The contact system includes three main forms:
 ### Option 3: Custom API Routes
 
 1. **Create API Routes**
+
    ```typescript
    // pages/api/contact.ts or app/api/contact/route.ts
    export default async function handler(req, res) {
@@ -70,16 +74,19 @@ The contact system includes three main forms:
 ## Form Features
 
 ### Contact Form
+
 - **Fields**: Name, Email, Phone, Project Type, Budget, Message
 - **Validation**: Required fields, email format, phone format
 - **Features**: Real-time validation, loading states, success messages
 
-### Project Inquiry Form  
+### Project Inquiry Form
+
 - **Multi-step**: 4-step wizard with progress indicator
 - **Fields**: All contact fields plus space details, challenges, goals
 - **Features**: Step navigation, comprehensive questionnaire, accessibility options
 
 ### Newsletter Signup
+
 - **Variants**: Default, Compact, Sidebar styles
 - **Fields**: Email, Name, Interest preferences
 - **Features**: Interest checkboxes, responsive design
@@ -87,6 +94,7 @@ The contact system includes three main forms:
 ## Accessibility Features
 
 All forms include:
+
 - ✅ Proper ARIA labels and descriptions
 - ✅ Keyboard navigation support
 - ✅ Screen reader compatibility
@@ -105,6 +113,7 @@ All forms include:
 ## Testing the Forms
 
 1. **Start Development Server**
+
    ```bash
    npm run dev
    ```
@@ -123,7 +132,7 @@ All forms include:
 
 1. **Environment Variables**
    - Add your email service credentials to production environment
-   - Ensure all NEXT_PUBLIC_ variables are set
+   - Ensure all NEXT*PUBLIC* variables are set
 
 2. **Email Templates**
    - Customize email templates in the EmailService
@@ -137,16 +146,19 @@ All forms include:
 ## Troubleshooting
 
 ### Forms Not Submitting
+
 - Check environment variables are set
 - Verify EmailService is uncommented
 - Check browser console for errors
 
 ### Validation Issues
+
 - Ensure all required fields are filled
 - Check email format is valid
 - Verify phone number format
 
 ### Styling Issues
+
 - Forms use Tailwind classes
 - Ensure Tailwind CSS is properly loaded
 - Check for conflicting styles
@@ -154,6 +166,7 @@ All forms include:
 ## Support
 
 For setup assistance:
+
 - Check the EmailService.ts file for detailed comments
 - Review component code for integration examples
 - Test with mock data first before connecting real email services
@@ -161,6 +174,7 @@ For setup assistance:
 ---
 
 **Next Steps:**
+
 1. Choose your email service provider
 2. Set up environment variables
 3. Test form submissions

@@ -3,11 +3,12 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Page Not Found - Breathe Again',
-  description: 'The page you are looking for does not exist. Explore our biophilic design services and portfolio.',
+  description:
+    'The page you are looking for does not exist. Explore our biophilic design services and portfolio.',
   robots: {
     index: false,
-    follow: false
-  }
+    follow: false,
+  },
 }
 
 export default function NotFound() {
@@ -17,8 +18,14 @@ export default function NotFound() {
         {/* Floating organic shapes */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-sage-300/20 dark:bg-sage-600/20 organic-shape animate-pulse" />
-          <div className="absolute bottom-32 right-20 w-48 h-48 bg-forest-300/15 dark:bg-forest-600/15 organic-shape animate-pulse" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-moss-300/25 dark:bg-moss-600/25 organic-shape animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-32 right-20 w-48 h-48 bg-forest-300/15 dark:bg-forest-600/15 organic-shape animate-pulse"
+            style={{ animationDelay: '2s' }}
+          />
+          <div
+            className="absolute top-1/3 right-1/4 w-24 h-24 bg-moss-300/25 dark:bg-moss-600/25 organic-shape animate-pulse"
+            style={{ animationDelay: '1s' }}
+          />
         </div>
 
         <div className="relative z-10">
@@ -35,9 +42,10 @@ export default function NotFound() {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest-900 dark:text-sage-100 mb-4 heading-nature">
             Page Not Found
           </h2>
-          
+
           <p className="text-lg text-forest-600 dark:text-sage-300 mb-8 max-w-md mx-auto leading-relaxed">
-            Like a hidden garden path, this page seems to have grown over. Let's help you find your way back to nature.
+            Like a hidden garden path, this page seems to have grown over.
+            Let&apos;s help you find your way back to nature.
           </p>
 
           {/* Navigation options */}

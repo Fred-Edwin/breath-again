@@ -1,28 +1,25 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 import { PortfolioFiltersProps } from '@/types/portfolio'
 
 export default function PortfolioFilters({
   filterState,
   onFilterChange,
   categories,
-  className = ""
+  className = '',
 }: PortfolioFiltersProps) {
-  const [isSearchExpanded, setIsSearchExpanded] = useState(false)
-
   const handleCategoryChange = (category: any) => {
     onFilterChange({
       ...filterState,
-      category
+      category,
     })
   }
 
   const handleSearchChange = (searchTerm: string) => {
     onFilterChange({
       ...filterState,
-      searchTerm
+      searchTerm,
     })
   }
 
@@ -30,30 +27,29 @@ export default function PortfolioFilters({
     onFilterChange({
       category: 'all',
       searchTerm: '',
-      tags: []
+      tags: [],
     })
-    setIsSearchExpanded(false)
   }
 
-  const hasActiveFilters = filterState.category !== 'all' || filterState.searchTerm || filterState.tags.length > 0
+  const hasActiveFilters =
+    filterState.category !== 'all' ||
+    filterState.searchTerm ||
+    filterState.tags.length > 0
 
   return (
-    <div className={`bg-white rounded-2xl shadow-sm border border-sage-100 p-6 ${className}`}>
+    <div
+      className={`bg-white rounded-2xl shadow-sm border border-sage-100 p-6 ${className}`}
+    >
       {/* Search Bar */}
       <div className="mb-6">
         <div className="relative">
-          <motion.div
-            className="flex items-center"
-            layout
-          >
+          <motion.div className="flex items-center" layout>
             <div className="relative flex-grow">
               <input
                 type="text"
                 placeholder="Search services..."
                 value={filterState.searchTerm}
                 onChange={(e) => handleSearchChange(e.target.value)}
-                onFocus={() => setIsSearchExpanded(true)}
-                onBlur={() => setIsSearchExpanded(false)}
                 className="w-full pl-12 pr-4 py-3 border border-sage-200 rounded-xl focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all duration-200 text-forest-900 placeholder-forest-400"
               />
               <svg
@@ -62,16 +58,26 @@ export default function PortfolioFilters({
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
               </svg>
-              
+
               {filterState.searchTerm && (
                 <button
                   onClick={() => handleSearchChange('')}
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-forest-400 hover:text-forest-600 transition-colors"
                 >
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               )}
@@ -99,11 +105,13 @@ export default function PortfolioFilters({
               whileTap={{ scale: 0.95 }}
             >
               <span>{category.label}</span>
-              <span className={`ml-2 text-xs ${
-                filterState.category === category.value
-                  ? 'text-sage-200'
-                  : 'text-forest-500'
-              }`}>
+              <span
+                className={`ml-2 text-xs ${
+                  filterState.category === category.value
+                    ? 'text-sage-200'
+                    : 'text-forest-500'
+                }`}
+              >
                 ({category.count})
               </span>
             </motion.button>
@@ -120,12 +128,22 @@ export default function PortfolioFilters({
           exit={{ opacity: 0, height: 0 }}
         >
           <div className="flex items-center space-x-2 text-sm text-forest-600">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+              />
             </svg>
             <span>Filters active</span>
           </div>
-          
+
           <motion.button
             onClick={clearFilters}
             className="text-sm text-forest-600 hover:text-forest-800 underline underline-offset-2 transition-colors"
@@ -148,7 +166,7 @@ export default function PortfolioFilters({
             'wellness',
             'sustainable',
             'luxury',
-            'small spaces'
+            'small spaces',
           ].map((tag) => (
             <button
               key={tag}

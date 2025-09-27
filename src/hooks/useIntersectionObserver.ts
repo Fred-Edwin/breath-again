@@ -13,7 +13,7 @@ export function useIntersectionObserver({
   threshold = 0,
   root = null,
   rootMargin = '0%',
-  freezeOnceVisible = false
+  freezeOnceVisible = false,
 }: UseIntersectionObserverProps = {}) {
   const [entry, setEntry] = useState<IntersectionObserverEntry>()
   const [isVisible, setIsVisible] = useState(false)
@@ -47,7 +47,7 @@ export function useScrollAnimation(options?: UseIntersectionObserverProps) {
   const { ref, isVisible } = useIntersectionObserver({
     threshold: 0.1,
     freezeOnceVisible: true,
-    ...options
+    ...options,
   })
 
   return { ref, isVisible }

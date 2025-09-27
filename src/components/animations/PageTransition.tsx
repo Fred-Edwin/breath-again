@@ -18,24 +18,24 @@ export default function PageTransition({ children }: PageTransitionProps) {
     initial: {
       opacity: 0,
       y: animationConfig.enabled ? 20 : 0,
-      scale: animationConfig.enabled ? 0.98 : 1
+      scale: animationConfig.enabled ? 0.98 : 1,
     },
     in: {
       opacity: 1,
       y: 0,
-      scale: 1
+      scale: 1,
     },
     out: {
       opacity: 0,
       y: animationConfig.enabled ? -20 : 0,
-      scale: animationConfig.enabled ? 1.02 : 1
-    }
+      scale: animationConfig.enabled ? 1.02 : 1,
+    },
   }
 
   const pageTransition = {
     type: 'tween' as const,
     ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
-    duration: animationConfig.enabled ? 0.4 : 0.01
+    duration: animationConfig.enabled ? 0.4 : 0.01,
   }
 
   return (
@@ -76,12 +76,16 @@ export function RouteLoading({ isLoading }: RouteLoadingProps) {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ 
+            transition={{
               duration: animationConfig.enabled ? 0.3 : 0.01,
-              delay: animationConfig.enabled ? 0.1 : 0
+              delay: animationConfig.enabled ? 0.1 : 0,
             }}
           >
-            <LoadingSpinner variant="organic" size="lg" className="text-forest-600 dark:text-sage-400" />
+            <LoadingSpinner
+              variant="organic"
+              size="lg"
+              className="text-forest-600 dark:text-sage-400"
+            />
             <p className="text-sm text-forest-600 dark:text-sage-400 font-medium">
               Loading...
             </p>
@@ -98,10 +102,10 @@ interface SectionTransitionProps {
   className?: string
 }
 
-export function SectionTransition({ 
-  children, 
+export function SectionTransition({
+  children,
   delay = 0,
-  className = '' 
+  className = '',
 }: SectionTransitionProps) {
   const animationConfig = useAnimationConfig()
 
@@ -113,7 +117,7 @@ export function SectionTransition({
       transition={{
         duration: animationConfig.enabled ? 0.6 : 0.01,
         delay: animationConfig.enabled ? delay : 0,
-        ease: [0, 0, 0.2, 1]
+        ease: [0, 0, 0.2, 1],
       }}
     >
       {children}
@@ -136,19 +140,24 @@ export function SlideTransition({
   distance = 100,
   duration = 0.6,
   delay = 0,
-  className = ''
+  className = '',
 }: SlideTransitionProps) {
   const animationConfig = useAnimationConfig()
 
   const getInitialPosition = () => {
     if (!animationConfig.enabled) return { opacity: 1 }
-    
+
     switch (direction) {
-      case 'left': return { opacity: 0, x: -distance }
-      case 'right': return { opacity: 0, x: distance }
-      case 'up': return { opacity: 0, y: -distance }
-      case 'down': return { opacity: 0, y: distance }
-      default: return { opacity: 0, x: -distance }
+      case 'left':
+        return { opacity: 0, x: -distance }
+      case 'right':
+        return { opacity: 0, x: distance }
+      case 'up':
+        return { opacity: 0, y: -distance }
+      case 'down':
+        return { opacity: 0, y: distance }
+      default:
+        return { opacity: 0, x: -distance }
     }
   }
 
@@ -160,7 +169,7 @@ export function SlideTransition({
       transition={{
         duration: animationConfig.enabled ? duration : 0.01,
         delay: animationConfig.enabled ? delay : 0,
-        ease: [0, 0, 0.2, 1]
+        ease: [0, 0, 0.2, 1],
       }}
     >
       {children}

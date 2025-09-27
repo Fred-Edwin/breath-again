@@ -1,4 +1,9 @@
-export type ProjectCategory = 'residential' | 'commercial' | 'hospitality' | 'wellness' | 'landscape'
+export type ProjectCategory =
+  | 'residential'
+  | 'commercial'
+  | 'hospitality'
+  | 'wellness'
+  | 'landscape'
 
 export interface ProjectImage {
   id: string

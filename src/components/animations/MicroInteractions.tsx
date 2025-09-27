@@ -12,13 +12,24 @@ interface AnimatedButtonProps extends MotionProps {
   onClick?: () => void
 }
 
-export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>(
-  ({ children, variant = 'lift', className = '', disabled = false, ...props }, ref) => {
+export const AnimatedButton = forwardRef<
+  HTMLButtonElement,
+  AnimatedButtonProps
+>(
+  (
+    { children, variant = 'lift', className = '', disabled = false, ...props },
+    ref
+  ) => {
     const animationConfig = useAnimationConfig()
 
     if (!animationConfig.enabled) {
       return (
-        <button ref={ref} className={className} disabled={disabled} {...(props as any)}>
+        <button
+          ref={ref}
+          className={className}
+          disabled={disabled}
+          {...(props as any)}
+        >
           {children}
         </button>
       )
@@ -29,30 +40,30 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>
         case 'lift':
           return {
             hover: { y: -2, scale: 1.02 },
-            tap: { y: 0, scale: 0.98 }
+            tap: { y: 0, scale: 0.98 },
           }
         case 'scale':
           return {
             hover: { scale: 1.05 },
-            tap: { scale: 0.95 }
+            tap: { scale: 0.95 },
           }
         case 'glow':
           return {
-            hover: { 
+            hover: {
               boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-              scale: 1.02
+              scale: 1.02,
             },
-            tap: { scale: 0.98 }
+            tap: { scale: 0.98 },
           }
         case 'float':
           return {
             hover: { y: -4 },
-            tap: { y: -2 }
+            tap: { y: -2 },
           }
         default:
           return {
             hover: { scale: 1.02 },
-            tap: { scale: 0.98 }
+            tap: { scale: 0.98 },
           }
       }
     }
@@ -83,12 +94,12 @@ interface AnimatedCardProps extends MotionProps {
   onClick?: () => void
 }
 
-export function AnimatedCard({ 
-  children, 
-  variant = 'lift', 
+export function AnimatedCard({
+  children,
+  variant = 'lift',
   className = '',
   onClick,
-  ...props 
+  ...props
 }: AnimatedCardProps) {
   const animationConfig = useAnimationConfig()
 
@@ -104,36 +115,36 @@ export function AnimatedCard({
     switch (variant) {
       case 'lift':
         return {
-          hover: { 
+          hover: {
             y: -10,
-            boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
-          }
+            boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+          },
         }
       case 'tilt':
         return {
-          hover: { 
+          hover: {
             rotateX: 5,
             rotateY: 5,
-            scale: 1.02
-          }
+            scale: 1.02,
+          },
         }
       case 'glow':
         return {
           hover: {
             boxShadow: '0 0 30px rgba(135, 169, 107, 0.3)',
-            borderColor: 'rgba(135, 169, 107, 0.5)'
-          }
+            borderColor: 'rgba(135, 169, 107, 0.5)',
+          },
         }
       case 'border-glow':
         return {
           hover: {
             borderColor: 'rgba(135, 169, 107, 1)',
-            boxShadow: '0 0 20px rgba(135, 169, 107, 0.2)'
-          }
+            boxShadow: '0 0 20px rgba(135, 169, 107, 0.2)',
+          },
         }
       default:
         return {
-          hover: { y: -5 }
+          hover: { y: -5 },
         }
     }
   }
@@ -166,7 +177,7 @@ export function FloatingElement({
   delay = 0,
   amplitude = 10,
   duration = 3,
-  className = ''
+  className = '',
 }: FloatingElementProps) {
   const animationConfig = useAnimationConfig()
 
@@ -178,13 +189,13 @@ export function FloatingElement({
     <motion.div
       className={className}
       animate={{
-        y: [-amplitude/2, amplitude/2, -amplitude/2]
+        y: [-amplitude / 2, amplitude / 2, -amplitude / 2],
       }}
       transition={{
         duration,
         repeat: Infinity,
         ease: [0.4, 0, 0.2, 1],
-        delay
+        delay,
       }}
     >
       {children}
@@ -203,7 +214,7 @@ export function PulseElement({
   children,
   scale = [1, 1.05],
   duration = 2,
-  className = ''
+  className = '',
 }: PulseElementProps) {
   const animationConfig = useAnimationConfig()
 
@@ -215,12 +226,12 @@ export function PulseElement({
     <motion.div
       className={className}
       animate={{
-        scale: [scale[0], scale[1], scale[0]]
+        scale: [scale[0], scale[1], scale[0]],
       }}
       transition={{
         duration,
         repeat: Infinity,
-        ease: [0.4, 0, 0.2, 1]
+        ease: [0.4, 0, 0.2, 1],
       }}
     >
       {children}
@@ -239,17 +250,22 @@ export function StaggeredList({
   children,
   staggerDelay = 0.1,
   direction = 'up',
-  className = ''
+  className = '',
 }: StaggeredListProps) {
   const animationConfig = useAnimationConfig()
 
   const getInitialOffset = () => {
     switch (direction) {
-      case 'up': return { y: 30 }
-      case 'down': return { y: -30 }
-      case 'left': return { x: 30 }
-      case 'right': return { x: -30 }
-      default: return { y: 30 }
+      case 'up':
+        return { y: 30 }
+      case 'down':
+        return { y: -30 }
+      case 'left':
+        return { x: 30 }
+      case 'right':
+        return { x: -30 }
+      default:
+        return { y: 30 }
     }
   }
 
@@ -262,7 +278,7 @@ export function StaggeredList({
           animate={{ opacity: 1, y: 0, x: 0 }}
           transition={{
             ...animationConfig.transition,
-            delay: index * (animationConfig.enabled ? staggerDelay : 0)
+            delay: index * (animationConfig.enabled ? staggerDelay : 0),
           }}
         >
           {child}

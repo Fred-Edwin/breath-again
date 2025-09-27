@@ -11,15 +11,15 @@ interface LoadingSpinnerProps {
 
 const sizeClasses = {
   sm: 'w-4 h-4',
-  md: 'w-6 h-6', 
+  md: 'w-6 h-6',
   lg: 'w-8 h-8',
-  xl: 'w-12 h-12'
+  xl: 'w-12 h-12',
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
+export default function LoadingSpinner({
+  size = 'md',
   variant = 'organic',
-  className = '' 
+  className = '',
 }: LoadingSpinnerProps) {
   const prefersReducedMotion = useReducedMotion()
 
@@ -48,33 +48,48 @@ export default function LoadingSpinner({
             <motion.div
               className="absolute inset-0 border-2 border-current border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: [0.4, 0, 0.2, 1],
+              }}
             />
             <motion.div
               className="absolute inset-1 border border-current border-b-transparent rounded-full"
               animate={{ rotate: -360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: [0.4, 0, 0.2, 1],
+              }}
             />
           </div>
         )
 
       case 'dots':
-        const dotSize = size === 'sm' ? 'w-1 h-1' : size === 'md' ? 'w-1.5 h-1.5' : size === 'lg' ? 'w-2 h-2' : 'w-3 h-3'
+        const dotSize =
+          size === 'sm'
+            ? 'w-1 h-1'
+            : size === 'md'
+              ? 'w-1.5 h-1.5'
+              : size === 'lg'
+                ? 'w-2 h-2'
+                : 'w-3 h-3'
         return (
           <div className={`flex space-x-1 ${className}`}>
-            {[0, 1, 2].map(i => (
+            {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
                 className={`${dotSize} bg-current rounded-full`}
                 animate={{
                   scale: [1, 1.2, 1],
-                  opacity: [0.7, 1, 0.7]
+                  opacity: [0.7, 1, 0.7],
                 }}
                 transition={{
                   duration: 1.2,
                   repeat: Infinity,
                   delay: i * 0.2,
-                  ease: [0.4, 0, 0.2, 1]
+                  ease: [0.4, 0, 0.2, 1],
                 }}
               />
             ))}
@@ -82,21 +97,28 @@ export default function LoadingSpinner({
         )
 
       case 'wave':
-        const barHeight = size === 'sm' ? 'h-3' : size === 'md' ? 'h-4' : size === 'lg' ? 'h-5' : 'h-6'
+        const barHeight =
+          size === 'sm'
+            ? 'h-3'
+            : size === 'md'
+              ? 'h-4'
+              : size === 'lg'
+                ? 'h-5'
+                : 'h-6'
         return (
           <div className={`flex items-end space-x-0.5 ${className}`}>
-            {[0, 1, 2, 3].map(i => (
+            {[0, 1, 2, 3].map((i) => (
               <motion.div
                 key={i}
                 className={`w-0.5 bg-current rounded-full ${barHeight}`}
                 animate={{
-                  scaleY: [1, 0.3, 1]
+                  scaleY: [1, 0.3, 1],
                 }}
                 transition={{
                   duration: 1,
                   repeat: Infinity,
                   delay: i * 0.1,
-                  ease: [0.4, 0, 0.2, 1]
+                  ease: [0.4, 0, 0.2, 1],
                 }}
               />
             ))}

@@ -8,10 +8,10 @@ interface ParallaxOptions {
   disabled?: boolean
 }
 
-export function useParallax({ 
-  speed = 0.5, 
+export function useParallax({
+  speed = 0.5,
   direction = 'up',
-  disabled = false 
+  disabled = false,
 }: ParallaxOptions = {}) {
   const [offset, setOffset] = useState(0)
 
@@ -31,7 +31,7 @@ export function useParallax({
 
   const getTransform = () => {
     if (disabled) return 'none'
-    
+
     switch (direction) {
       case 'up':
         return `translateY(-${offset}px)`
@@ -48,6 +48,6 @@ export function useParallax({
 
   return {
     transform: getTransform(),
-    offset
+    offset,
   }
 }

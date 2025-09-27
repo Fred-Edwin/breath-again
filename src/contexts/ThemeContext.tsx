@@ -1,6 +1,12 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from 'react'
 
 type Theme = 'light' | 'dark' | 'system'
 
@@ -30,7 +36,7 @@ interface ThemeProviderProps {
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
-  storageKey = 'breath-again-theme'
+  storageKey = 'breath-again-theme',
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(defaultTheme)
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light')
@@ -38,25 +44,31 @@ export function ThemeProvider({
   // Get system theme preference
   const getSystemTheme = (): 'light' | 'dark' => {
     if (typeof window === 'undefined') return 'light'
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
   }
 
   // Update resolved theme based on current theme setting
   const updateResolvedTheme = (currentTheme: Theme) => {
-    const newResolvedTheme = currentTheme === 'system' ? getSystemTheme() : currentTheme
+    const newResolvedTheme =
+      currentTheme === 'system' ? getSystemTheme() : currentTheme
     setResolvedTheme(newResolvedTheme)
-    
+
     // Update document attribute
     if (typeof document !== 'undefined') {
       document.documentElement.setAttribute('data-theme', newResolvedTheme)
-      document.documentElement.classList.toggle('dark', newResolvedTheme === 'dark')
+      document.documentElement.classList.toggle(
+        'dark',
+        newResolvedTheme === 'dark'
+      )
     }
   }
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme)
     updateResolvedTheme(newTheme)
-    
+
     // Save to localStorage
     if (typeof window !== 'undefined') {
       localStorage.setItem(storageKey, newTheme)
@@ -104,7 +116,7 @@ export function ThemeProvider({
     theme,
     resolvedTheme,
     setTheme,
-    toggleTheme
+    toggleTheme,
   }
 
   return (

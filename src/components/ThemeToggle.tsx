@@ -15,15 +15,15 @@ export default function ThemeToggle({
   size = 'md',
   variant = 'button',
   showLabel = false,
-  className = ''
+  className = '',
 }: ThemeToggleProps) {
-  const { theme, resolvedTheme, setTheme, toggleTheme } = useTheme()
+  const { resolvedTheme, toggleTheme } = useTheme()
   const animationConfig = useAnimationConfig()
 
   const sizeClasses = {
     sm: 'w-8 h-8 text-sm',
     md: 'w-10 h-10 text-base',
-    lg: 'w-12 h-12 text-lg'
+    lg: 'w-12 h-12 text-lg',
   }
 
   const renderIcon = (isDark: boolean) => {
@@ -83,15 +83,12 @@ export default function ThemeToggle({
             {resolvedTheme === 'light' ? 'Light' : 'Dark'} Mode
           </span>
         )}
-        
+
         <motion.button
           onClick={toggleTheme}
           className={`
             relative inline-flex h-6 w-11 items-center rounded-full transition-colors
-            ${resolvedTheme === 'dark' 
-              ? 'bg-forest-600' 
-              : 'bg-sage-200'
-            }
+            ${resolvedTheme === 'dark' ? 'bg-forest-600' : 'bg-sage-200'}
             focus:outline-none focus:ring-2 focus:ring-sage-500 focus:ring-offset-2
           `}
           whileHover={{ scale: animationConfig.enabled ? 1.05 : 1 }}
@@ -103,7 +100,7 @@ export default function ThemeToggle({
               ${resolvedTheme === 'dark' ? 'translate-x-6' : 'translate-x-1'}
             `}
             animate={{
-              x: resolvedTheme === 'dark' ? 24 : 4
+              x: resolvedTheme === 'dark' ? 24 : 4,
             }}
             transition={animationConfig.transition}
           />
@@ -124,9 +121,9 @@ export default function ThemeToggle({
           focus:outline-none focus:ring-2 focus:ring-sage-500 focus:ring-offset-2
           transition-colors duration-200
         `}
-        whileHover={{ 
+        whileHover={{
           scale: animationConfig.enabled ? 1.1 : 1,
-          rotate: animationConfig.enabled ? 15 : 0 
+          rotate: animationConfig.enabled ? 15 : 0,
         }}
         whileTap={{ scale: animationConfig.enabled ? 0.9 : 1 }}
         aria-label={`Switch to ${resolvedTheme === 'light' ? 'dark' : 'light'} mode`}
@@ -160,7 +157,7 @@ export default function ThemeToggle({
       <AnimatePresence mode="wait">
         {renderIcon(resolvedTheme === 'dark')}
       </AnimatePresence>
-      
+
       {showLabel && (
         <span className="ml-2 text-xs">
           {resolvedTheme === 'light' ? 'Dark' : 'Light'}

@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
@@ -27,7 +26,10 @@ export default function Header() {
 
   return (
     <header className="bg-white/95 dark:bg-forest-900/95 backdrop-blur-sm border-b border-sage-200 dark:border-forest-700 sticky top-0 z-50 shadow-sm transition-colors duration-300">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <nav
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        aria-label="Main navigation"
+      >
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
@@ -53,7 +55,7 @@ export default function Header() {
               </div>
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="flex items-center space-x-1">
@@ -69,9 +71,11 @@ export default function Header() {
                   aria-current={isActivePage(item.href) ? 'page' : undefined}
                 >
                   {item.name}
-                  <span className={`absolute bottom-0 left-1/2 w-0 h-0.5 bg-forest-600 dark:bg-sage-400 transition-all duration-200 group-hover:w-8 group-hover:-translate-x-1/2 ${
-                    isActivePage(item.href) ? 'w-8 -translate-x-1/2' : ''
-                  }`}></span>
+                  <span
+                    className={`absolute bottom-0 left-1/2 w-0 h-0.5 bg-forest-600 dark:bg-sage-400 transition-all duration-200 group-hover:w-8 group-hover:-translate-x-1/2 ${
+                      isActivePage(item.href) ? 'w-8 -translate-x-1/2' : ''
+                    }`}
+                  ></span>
                 </Link>
               ))}
             </div>
@@ -80,14 +84,14 @@ export default function Header() {
           {/* Theme Toggle & CTA - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
             <ThemeToggle variant="icon" size="md" />
-            <Link 
+            <Link
               href="/contact"
               className="bg-forest-700 dark:bg-sage-600 text-sage-50 px-6 py-2.5 rounded-lg font-medium hover:bg-forest-800 dark:hover:bg-sage-700 transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-forest-500 dark:focus:ring-sage-400 focus:ring-offset-2 shadow-sm"
             >
               Get Started
             </Link>
           </div>
-          
+
           {/* Mobile menu button & theme toggle */}
           <div className="lg:hidden flex items-center space-x-2">
             <ThemeToggle variant="icon" size="sm" />
@@ -108,9 +112,19 @@ export default function Header() {
                 stroke="currentColor"
               >
                 {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 )}
               </svg>
             </button>
@@ -121,8 +135,8 @@ export default function Header() {
         <div
           id="mobile-menu"
           className={`lg:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen 
-              ? 'max-h-screen opacity-100 pb-6' 
+            isMenuOpen
+              ? 'max-h-screen opacity-100 pb-6'
               : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
@@ -143,7 +157,7 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-4">
-              <Link 
+              <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-center bg-forest-700 dark:bg-sage-600 text-sage-50 px-6 py-3 rounded-lg font-medium hover:bg-forest-800 dark:hover:bg-sage-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-forest-500 dark:focus:ring-sage-400"

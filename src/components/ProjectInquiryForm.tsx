@@ -21,11 +21,11 @@ const initialData: ProjectInquiryData = {
   accessibilityNeeds: '',
   inspirationImages: false,
   previousExperience: '',
-  additionalInfo: ''
+  additionalInfo: '',
 }
 
 const mockSubmit = async (data: ProjectInquiryData): Promise<void> => {
-  await new Promise(resolve => setTimeout(resolve, 2000))
+  await new Promise((resolve) => setTimeout(resolve, 2000))
   console.log('Project inquiry submitted:', data)
 }
 
@@ -37,7 +37,7 @@ const challenges = [
   'Disconnection from nature',
   'Noise pollution',
   'Monotonous environment',
-  'Health concerns'
+  'Health concerns',
 ]
 
 const designGoals = [
@@ -48,21 +48,23 @@ const designGoals = [
   'Create connection to nature',
   'Enhance well-being',
   'Improve aesthetics',
-  'Increase property value'
+  'Increase property value',
 ]
 
 interface ProjectInquiryFormProps {
   onClose?: () => void
 }
 
-export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps) {
+export default function ProjectInquiryForm({
+  onClose,
+}: ProjectInquiryFormProps) {
   const [currentStep, setCurrentStep] = useState(1)
   const totalSteps = 4
 
   const { data, state, updateField, handleArrayField, submitForm } = useForm({
     initialData,
     validate: validateProjectInquiry,
-    onSubmit: mockSubmit
+    onSubmit: mockSubmit,
   })
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -129,8 +131,18 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
             className="p-2 hover:bg-sage-100 rounded-lg transition-colors"
             aria-label="Close form"
           >
-            <svg className="w-6 h-6 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-6 h-6 text-forest-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         )}
@@ -141,8 +153,8 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
       {state.message && (
         <motion.div
           className={`mb-6 p-4 rounded-lg ${
-            state.isSuccess 
-              ? 'bg-green-50 text-green-800 border border-green-200' 
+            state.isSuccess
+              ? 'bg-green-50 text-green-800 border border-green-200'
               : 'bg-red-50 text-red-800 border border-red-200'
           }`}
           initial={{ opacity: 0, y: -10 }}
@@ -161,8 +173,10 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
           >
-            <h3 className="text-lg font-semibold text-forest-900 mb-4">Basic Information</h3>
-            
+            <h3 className="text-lg font-semibold text-forest-900 mb-4">
+              Basic Information
+            </h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-forest-700 mb-2">
@@ -178,7 +192,9 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
                   placeholder="Your full name"
                 />
                 {state.errors.name && (
-                  <p className="mt-1 text-sm text-red-600">{state.errors.name}</p>
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.name}
+                  </p>
                 )}
               </div>
 
@@ -196,7 +212,9 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
                   placeholder="your@email.com"
                 />
                 {state.errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{state.errors.email}</p>
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.email}
+                  </p>
                 )}
               </div>
             </div>
@@ -244,8 +262,10 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
           >
-            <h3 className="text-lg font-semibold text-forest-900 mb-4">Project Details</h3>
-            
+            <h3 className="text-lg font-semibold text-forest-900 mb-4">
+              Project Details
+            </h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-forest-700 mb-2">
@@ -256,12 +276,16 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
                   value={data.spaceSize}
                   onChange={(e) => updateField('spaceSize', e.target.value)}
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all duration-200 ${
-                    state.errors.spaceSize ? 'border-red-300' : 'border-sage-200'
+                    state.errors.spaceSize
+                      ? 'border-red-300'
+                      : 'border-sage-200'
                   }`}
                   placeholder="e.g., 1,200 sq ft, 15x20 room"
                 />
                 {state.errors.spaceSize && (
-                  <p className="mt-1 text-sm text-red-600">{state.errors.spaceSize}</p>
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.spaceSize}
+                  </p>
                 )}
               </div>
 
@@ -338,19 +362,30 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
           >
-            <h3 className="text-lg font-semibold text-forest-900 mb-4">Challenges & Goals</h3>
-            
+            <h3 className="text-lg font-semibold text-forest-900 mb-4">
+              Challenges & Goals
+            </h3>
+
             <div>
               <label className="block text-sm font-medium text-forest-700 mb-3">
                 Current Challenges * (Select all that apply)
               </label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {challenges.map((challenge) => (
-                  <label key={challenge} className="flex items-center space-x-3 cursor-pointer">
+                  <label
+                    key={challenge}
+                    className="flex items-center space-x-3 cursor-pointer"
+                  >
                     <input
                       type="checkbox"
                       checked={data.currentChallenges.includes(challenge)}
-                      onChange={(e) => handleArrayField('currentChallenges', challenge, e.target.checked)}
+                      onChange={(e) =>
+                        handleArrayField(
+                          'currentChallenges',
+                          challenge,
+                          e.target.checked
+                        )
+                      }
                       className="w-4 h-4 text-forest-600 bg-white border-sage-300 rounded focus:ring-forest-500 focus:ring-2"
                     />
                     <span className="text-forest-700">{challenge}</span>
@@ -358,7 +393,9 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
                 ))}
               </div>
               {state.errors.currentChallenges && (
-                <p className="mt-2 text-sm text-red-600">{state.errors.currentChallenges}</p>
+                <p className="mt-2 text-sm text-red-600">
+                  {state.errors.currentChallenges}
+                </p>
               )}
             </div>
 
@@ -368,11 +405,16 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
               </label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {designGoals.map((goal) => (
-                  <label key={goal} className="flex items-center space-x-3 cursor-pointer">
+                  <label
+                    key={goal}
+                    className="flex items-center space-x-3 cursor-pointer"
+                  >
                     <input
                       type="checkbox"
                       checked={data.designGoals.includes(goal)}
-                      onChange={(e) => handleArrayField('designGoals', goal, e.target.checked)}
+                      onChange={(e) =>
+                        handleArrayField('designGoals', goal, e.target.checked)
+                      }
                       className="w-4 h-4 text-forest-600 bg-white border-sage-300 rounded focus:ring-forest-500 focus:ring-2"
                     />
                     <span className="text-forest-700">{goal}</span>
@@ -380,7 +422,9 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
                 ))}
               </div>
               {state.errors.designGoals && (
-                <p className="mt-2 text-sm text-red-600">{state.errors.designGoals}</p>
+                <p className="mt-2 text-sm text-red-600">
+                  {state.errors.designGoals}
+                </p>
               )}
             </div>
 
@@ -389,10 +433,14 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
                 <input
                   type="checkbox"
                   checked={data.sustainability}
-                  onChange={(e) => updateField('sustainability', e.target.checked)}
+                  onChange={(e) =>
+                    updateField('sustainability', e.target.checked)
+                  }
                   className="w-4 h-4 text-forest-600 bg-white border-sage-300 rounded focus:ring-forest-500 focus:ring-2"
                 />
-                <span className="text-forest-700">Sustainability and eco-friendly materials are important to me</span>
+                <span className="text-forest-700">
+                  Sustainability and eco-friendly materials are important to me
+                </span>
               </label>
             </div>
           </motion.div>
@@ -406,15 +454,19 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
           >
-            <h3 className="text-lg font-semibold text-forest-900 mb-4">Additional Information</h3>
-            
+            <h3 className="text-lg font-semibold text-forest-900 mb-4">
+              Additional Information
+            </h3>
+
             <div>
               <label className="block text-sm font-medium text-forest-700 mb-2">
                 Accessibility Needs
               </label>
               <textarea
                 value={data.accessibilityNeeds}
-                onChange={(e) => updateField('accessibilityNeeds', e.target.value)}
+                onChange={(e) =>
+                  updateField('accessibilityNeeds', e.target.value)
+                }
                 rows={3}
                 className="w-full px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all duration-200"
                 placeholder="Please describe any specific accessibility requirements..."
@@ -427,7 +479,9 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
               </label>
               <textarea
                 value={data.previousExperience}
-                onChange={(e) => updateField('previousExperience', e.target.value)}
+                onChange={(e) =>
+                  updateField('previousExperience', e.target.value)
+                }
                 rows={3}
                 className="w-full px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-all duration-200"
                 placeholder="Have you worked with biophilic design before? What did you like or dislike?"
@@ -439,10 +493,14 @@ export default function ProjectInquiryForm({ onClose }: ProjectInquiryFormProps)
                 <input
                   type="checkbox"
                   checked={data.inspirationImages}
-                  onChange={(e) => updateField('inspirationImages', e.target.checked)}
+                  onChange={(e) =>
+                    updateField('inspirationImages', e.target.checked)
+                  }
                   className="w-4 h-4 text-forest-600 bg-white border-sage-300 rounded focus:ring-forest-500 focus:ring-2"
                 />
-                <span className="text-forest-700">I have inspiration images to share</span>
+                <span className="text-forest-700">
+                  I have inspiration images to share
+                </span>
               </label>
             </div>
 

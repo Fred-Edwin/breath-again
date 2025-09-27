@@ -56,6 +56,7 @@ git push -u origin main
 ### Step 4: Deploy to Vercel
 
 #### Option A: Vercel CLI (Recommended)
+
 ```bash
 # Install Vercel CLI globally
 npm i -g vercel
@@ -76,6 +77,7 @@ vercel
 ```
 
 #### Option B: Vercel Dashboard
+
 1. **Visit Vercel**: Go to [vercel.com](https://vercel.com)
 2. **Sign up/Login**: Use GitHub account for easy integration
 3. **Import Project**: Click "New Project" → "Import Git Repository"
@@ -112,8 +114,9 @@ If you have environment variables:
 Now I'll implement comprehensive optimizations for perfect Lighthouse scores and professional SEO.
 
 ### Performance Optimization Checklist:
+
 - ✅ Next.js Image optimization
-- ✅ Lazy loading implementation  
+- ✅ Lazy loading implementation
 - ✅ Loading states and skeletons
 - ✅ Meta tags and Open Graph
 - ✅ Structured data markup
@@ -123,6 +126,7 @@ Now I'll implement comprehensive optimizations for perfect Lighthouse scores and
 - ✅ Perfect accessibility
 
 ### Expected Results:
+
 - **Performance**: 95-100
 - **Accessibility**: 100
 - **Best Practices**: 100
@@ -149,6 +153,7 @@ git push origin main
 ```
 
 ### Auto-Deploy Features:
+
 - **Preview Deployments**: Every pull request gets a preview URL
 - **Production Deployments**: Every push to main deploys to production
 - **Rollback**: Easy rollback to previous deployments
@@ -159,6 +164,7 @@ git push origin main
 ## 🌐 **Live URLs**
 
 After deployment, you'll have:
+
 - **Production URL**: `https://your-project.vercel.app`
 - **Custom Domain** (if configured): `https://your-domain.com`
 - **Preview URLs**: For each branch/PR
@@ -168,6 +174,7 @@ After deployment, you'll have:
 ## 🛠️ **Troubleshooting Common Issues**
 
 ### Build Errors:
+
 ```bash
 # Check build locally first
 npm run build
@@ -175,15 +182,17 @@ npm run build
 # Fix any TypeScript errors
 npm run type-check
 
-# Fix any linting errors  
+# Fix any linting errors
 npm run lint
 ```
 
 ### Environment Variables:
+
 - Ensure all `NEXT_PUBLIC_` variables are set in Vercel
 - Check variable names match exactly
 
 ### Domain Configuration:
+
 - DNS changes can take 24-48 hours
 - Use Vercel's DNS checker tool
 - Ensure SSL certificate is issued
@@ -193,12 +202,14 @@ npm run lint
 ## 📊 **Post-Deployment Monitoring**
 
 ### Analytics Setup:
+
 1. **Vercel Analytics**: Enable in project settings
 2. **Google Analytics**: Add GA4 tracking code
 3. **Search Console**: Verify domain ownership
 4. **Performance Monitoring**: Use Vercel's built-in tools
 
 ### SEO Monitoring:
+
 1. **Submit sitemap** to Google Search Console
 2. **Monitor Core Web Vitals** in Vercel dashboard
 3. **Test mobile performance** regularly

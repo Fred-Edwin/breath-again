@@ -7,49 +7,62 @@ interface UseFormProps<T> {
   onSubmit: (data: T) => Promise<void>
 }
 
-export function useForm<T>({ initialData, validate, onSubmit }: UseFormProps<T>) {
+export function useForm<T>({
+  initialData,
+  validate,
+  onSubmit,
+}: UseFormProps<T>) {
   const [data, setData] = useState<T>(initialData)
   const [state, setState] = useState<FormState>({
     isLoading: false,
     isSuccess: false,
     errors: {},
-    message: ''
+    message: '',
   })
 
-  const updateField = useCallback((field: keyof T, value: any) => {
-    setData(prev => ({ ...prev, [field]: value }))
-    
-    // Clear field error when user starts typing
-    if (state.errors[field as string]) {
-      setState(prev => ({
-        ...prev,
-        errors: { ...prev.errors, [field as string]: '' }
-      }))
-    }
-  }, [state.errors])
+  const updateField = useCallback(
+    (field: keyof T, value: any) => {
+      setData((prev) => ({ ...prev, [field]: value }))
 
-  const handleArrayField = useCallback((field: keyof T, value: string, checked: boolean) => {
-    setData(prev => {
-      const currentArray = (prev[field] as string[]) || []
-      if (checked) {
-        return { ...prev, [field]: [...currentArray, value] }
-      } else {
-        return { ...prev, [field]: currentArray.filter(item => item !== value) }
+      // Clear field error when user starts typing
+      if (state.errors[field as string]) {
+        setState((prev) => ({
+          ...prev,
+          errors: { ...prev.errors, [field as string]: '' },
+        }))
       }
-    })
-  }, [])
+    },
+    [state.errors]
+  )
+
+  const handleArrayField = useCallback(
+    (field: keyof T, value: string, checked: boolean) => {
+      setData((prev) => {
+        const currentArray = (prev[field] as string[]) || []
+        if (checked) {
+          return { ...prev, [field]: [...currentArray, value] }
+        } else {
+          return {
+            ...prev,
+            [field]: currentArray.filter((item) => item !== value),
+          }
+        }
+      })
+    },
+    []
+  )
 
   const submitForm = useCallback(async () => {
-    setState(prev => ({ ...prev, isLoading: true, errors: {}, message: '' }))
+    setState((prev) => ({ ...prev, isLoading: true, errors: {}, message: '' }))
 
     // Validate form
     const validationErrors = validate(data)
     if (Object.keys(validationErrors).length > 0) {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         isLoading: false,
         errors: validationErrors,
-        message: 'Please fix the errors below'
+        message: 'Please fix the errors below',
       }))
       return
     }
@@ -60,15 +73,15 @@ export function useForm<T>({ initialData, validate, onSubmit }: UseFormProps<T>)
         isLoading: false,
         isSuccess: true,
         errors: {},
-        message: 'Thank you! Your message has been sent successfully.'
+        message: 'Thank you! Your message has been sent successfully.',
       })
       setData(initialData)
-    } catch (error) {
+    } catch {
       setState({
         isLoading: false,
         isSuccess: false,
         errors: {},
-        message: 'Something went wrong. Please try again later.'
+        message: 'Something went wrong. Please try again later.',
       })
     }
   }, [data, validate, onSubmit, initialData])
@@ -79,7 +92,7 @@ export function useForm<T>({ initialData, validate, onSubmit }: UseFormProps<T>)
       isLoading: false,
       isSuccess: false,
       errors: {},
-      message: ''
+      message: '',
     })
   }, [initialData])
 
@@ -89,6 +102,6 @@ export function useForm<T>({ initialData, validate, onSubmit }: UseFormProps<T>)
     updateField,
     handleArrayField,
     submitForm,
-    resetForm
+    resetForm,
   }
 }

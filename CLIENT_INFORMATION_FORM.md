@@ -1,6 +1,7 @@
 # Breathe Again Website - Client Information Form
 
 ## Overview
+
 This form will help us customize your biophilic design website with your specific business details, replacing all placeholder content with your actual information. **Current placeholder content is shown in brackets [like this] for reference - you can edit or completely replace as needed.**
 
 ---
@@ -8,19 +9,22 @@ This form will help us customize your biophilic design website with your specifi
 ## 📋 **SECTION 1: BUSINESS INFORMATION**
 
 ### Basic Company Details
-- **Business Name**: [Breathe Again] → ________________________________
-- **Tagline/Subtitle**: [BIOPHILIC DESIGN STUDIO] → ________________________________
-- **Business Type**: 
+
+- **Business Name**: [Breathe Again] → **************\_\_\_\_**************
+- **Tagline/Subtitle**: [BIOPHILIC DESIGN STUDIO] → **************\_\_\_\_**************
+- **Business Type**:
   - [ ] Interior Design Studio
   - [ ] Landscape Architecture Firm
   - [ ] Design Consultancy
   - [ ] Architecture Practice
-  - [ ] Other: ________________________________
+  - [ ] Other: **************\_\_\_\_**************
 
 ### Contact Information
-- **Primary Email**: [hello@breatheagain.design] → ________________________________
-- **Phone Number**: [(555) 123-4567] → ________________________________
+
+- **Primary Email**: [hello@breatheagain.design] → **************\_\_\_\_**************
+- **Phone Number**: [(555) 123-4567] → **************\_\_\_\_**************
 - **Business Address**:
+
   ```
   Current: [123 Green Street, Nature District, ND 12345]
 
@@ -33,28 +37,31 @@ This form will help us customize your biophilic design website with your specifi
   ```
 
 ### Online Presence
-- **Website URL** (if existing): ________________________________
+
+- **Website URL** (if existing): **************\_\_\_\_**************
 - **Social Media Handles** (current links are placeholder "#"):
-  - Instagram: [#] → ________________________________
-  - Facebook: ________________________________
-  - LinkedIn: [#] → ________________________________
-  - Pinterest: [#] → ________________________________
-  - Twitter/X: [#] → ________________________________
-  - Other: ________________________________
+  - Instagram: [#] → **************\_\_\_\_**************
+  - Facebook: **************\_\_\_\_**************
+  - LinkedIn: [#] → **************\_\_\_\_**************
+  - Pinterest: [#] → **************\_\_\_\_**************
+  - Twitter/X: [#] → **************\_\_\_\_**************
+  - Other: **************\_\_\_\_**************
 
 ---
 
 ## 🎨 **SECTION 2: BRANDING & VISUAL IDENTITY**
 
 ### Logo & Brand Assets
+
 - **Do you have a logo?**: [ ] Yes [ ] No
-- **Logo file format/location**: ________________________________
+- **Logo file format/location**: **************\_\_\_\_**************
 - **Brand colors** (hex codes if available):
-  - Primary color: ________________________________
-  - Secondary color: ________________________________
-  - Accent color: ________________________________
+  - Primary color: **************\_\_\_\_**************
+  - Secondary color: **************\_\_\_\_**************
+  - Accent color: **************\_\_\_\_**************
 
 ### Brand Personality
+
 - **Brand adjectives** (choose 5-8 that best describe your brand):
   - [ ] Sophisticated [ ] Approachable [ ] Innovative [ ] Traditional
   - [ ] Luxurious [ ] Affordable [ ] Bold [ ] Subtle
@@ -62,6 +69,7 @@ This form will help us customize your biophilic design website with your specifi
   - [ ] Sustainable [ ] Modern [ ] Timeless [ ] Artistic
 
 ### Visual Preferences
+
 - **Preferred imagery style**:
   - [ ] Clean/Minimalist [ ] Lush/Abundant [ ] Industrial/Modern
   - [ ] Rustic/Natural [ ] Contemporary [ ] Traditional
@@ -74,8 +82,9 @@ This form will help us customize your biophilic design website with your specifi
 ## 👤 **SECTION 3: BUSINESS DETAILS**
 
 ### Company Story
-- **Founded year**: ________________________________
-- **Founder(s) name(s)**: ________________________________
+
+- **Founded year**: **************\_\_\_\_**************
+- **Founder(s) name(s)**: **************\_\_\_\_**************
 - **Company origin story** (2-3 sentences):
   ```
   ________________________________
@@ -84,6 +93,7 @@ This form will help us customize your biophilic design website with your specifi
   ```
 
 ### Mission & Values
+
 - **Mission statement**:
   ```
   ________________________________
@@ -99,25 +109,28 @@ This form will help us customize your biophilic design website with your specifi
   ```
 
 ### Team Information
-- **Number of team members**: ________________________________
+
+- **Number of team members**: **************\_\_\_\_**************
 - **Key team members** (current team is placeholder):
-**Current placeholder team:**
+  **Current placeholder team:**
 - [Sarah Chen - Founder & Lead Designer] - "With over 15 years in biophilic design, Sarah brings nature to life in every space she touches."
 - [Marcus Johnson - Sustainability Director] - "Marcus ensures every project meets the highest environmental standards while maintaining aesthetic excellence."
 - [Elena Rodriguez - Wellness Consultant] - "Elena specializes in creating spaces that promote mental health and overall well-being through natural design."
 
 **Your actual team** (name, role, brief bio):
-  ```
-  1. ________________________________
-  2. ________________________________
-  3. ________________________________
-  ```
+
+```
+1. ________________________________
+2. ________________________________
+3. ________________________________
+```
 
 ---
 
 ## 🏗️ **SECTION 4: SERVICES**
 
 ### Primary Services (check all that apply)
+
 - [ ] Interior Biophilic Design
 - [ ] Landscape Architecture
 - [ ] Wellness Space Consultation
@@ -128,44 +141,52 @@ This form will help us customize your biophilic design website with your specifi
 - [ ] Office Design
 - [ ] Sustainability Consulting
 - [ ] Plant Installation & Maintenance
-- [ ] Other: ________________________________
+- [ ] Other: **************\_\_\_\_**************
 
 ### Current Services (placeholder content to replace)
 
 **Current Service 1: [Residential Design]**
+
 - **Description**: "Create harmonious living spaces that blend natural elements with modern comfort, promoting wellness and tranquility in your daily life."
 - **Starting Price**: [$5,000]
 - **Price Range**: [$5,000 - $50,000+]
 
 **Current Service 2: [Commercial Spaces]**
+
 - **Description**: "Design productive, healthy work environments that reduce employee stress, increase creativity, and improve overall workplace satisfaction."
 - **Starting Price**: [$15,000]
 - **Price Range**: [$15,000 - $200,000+]
 
 **Current Service 3: [Design Consultation]**
+
 - **Description**: "Get professional advice and strategic planning to implement biophilic design principles in any space, with flexible consultation options."
 - **Starting Price**: [$250]
 - **Price Range**: [$250 - $2,500]
 
 ### Your Actual Services
+
 For each service you offer, please provide:
 
-**Your Service 1**: ________________________________
-- **Description**: ________________________________
-- **Typical project size**: ________________________________
-- **Price range**: ________________________________
+**Your Service 1**: **************\_\_\_\_**************
 
-**Your Service 2**: ________________________________
-- **Description**: ________________________________
-- **Typical project size**: ________________________________
-- **Price range**: ________________________________
+- **Description**: **************\_\_\_\_**************
+- **Typical project size**: **************\_\_\_\_**************
+- **Price range**: **************\_\_\_\_**************
 
-**Your Service 3**: ________________________________
-- **Description**: ________________________________
-- **Typical project size**: ________________________________
-- **Price range**: ________________________________
+**Your Service 2**: **************\_\_\_\_**************
+
+- **Description**: **************\_\_\_\_**************
+- **Typical project size**: **************\_\_\_\_**************
+- **Price range**: **************\_\_\_\_**************
+
+**Your Service 3**: **************\_\_\_\_**************
+
+- **Description**: **************\_\_\_\_**************
+- **Typical project size**: **************\_\_\_\_**************
+- **Price range**: **************\_\_\_\_**************
 
 ### Specializations
+
 - **What makes your approach unique?**:
   ```
   ________________________________
@@ -182,37 +203,39 @@ For each service you offer, please provide:
 ## 📁 **SECTION 5: PORTFOLIO & PROJECTS**
 
 ### Current Placeholder Projects (to be replaced)
+
 **The website currently has 8 placeholder projects:**
 
 **Featured Placeholder Projects:**
+
 1. **Urban Oasis Apartment** (Chicago, IL) - Residential - Client: Sarah & Michael Chen
 2. **Wellness Corporate Office** (Austin, TX) - Commercial - Client: TechFlow Solutions
 3. **Healing Garden Spa** (Sedona, AZ) - Hospitality - Client: Desert Rose Wellness Resort
 4. **Rooftop Restaurant Garden** (San Francisco, CA) - Hospitality - Client: Garden Table Restaurant
 
-**Additional Placeholder Projects:**
-5. **Sustainable Family Home** (Portland, OR) - Residential - Client: The Johnson Family
-6. **Mindful Meditation Center** (Boulder, CO) - Wellness - Client: Mountain Peace Center
-7. **Co-working Nature Space** (Brooklyn, NY) - Commercial - Client: GreenSpace Co-working
-8. **Luxury Hotel Lobby** (Miami, FL) - Hospitality - Client: Ocean Vista Resort
+**Additional Placeholder Projects:** 5. **Sustainable Family Home** (Portland, OR) - Residential - Client: The Johnson Family 6. **Mindful Meditation Center** (Boulder, CO) - Wellness - Client: Mountain Peace Center 7. **Co-working Nature Space** (Brooklyn, NY) - Commercial - Client: GreenSpace Co-working 8. **Luxury Hotel Lobby** (Miami, FL) - Hospitality - Client: Ocean Vista Resort
 
 ### Your Actual Project Categories
+
 **How many projects do you have in each category?**
-- Residential: ________________________________
-- Commercial: ________________________________
-- Hospitality: ________________________________
-- Wellness: ________________________________
-- Landscape: ________________________________
+
+- Residential: **************\_\_\_\_**************
+- Commercial: **************\_\_\_\_**************
+- Hospitality: **************\_\_\_\_**************
+- Wellness: **************\_\_\_\_**************
+- Landscape: **************\_\_\_\_**************
 
 ### Your Featured Projects
+
 **Please provide details for your top 6-8 projects to replace the placeholder ones:**
 
 **Project 1:**
-- **Name**: ________________________________
-- **Category**: ________________________________
-- **Location**: ________________________________
-- **Year**: ________________________________
-- **Client** (if shareable): ________________________________
+
+- **Name**: **************\_\_\_\_**************
+- **Category**: **************\_\_\_\_**************
+- **Location**: **************\_\_\_\_**************
+- **Year**: **************\_\_\_\_**************
+- **Client** (if shareable): **************\_\_\_\_**************
 - **Brief description** (2-3 sentences):
   ```
   ________________________________
@@ -231,11 +254,12 @@ For each service you offer, please provide:
   ```
 
 **Project 2:**
-- **Name**: ________________________________
-- **Category**: ________________________________
-- **Location**: ________________________________
-- **Year**: ________________________________
-- **Client** (if shareable): ________________________________
+
+- **Name**: **************\_\_\_\_**************
+- **Category**: **************\_\_\_\_**************
+- **Location**: **************\_\_\_\_**************
+- **Year**: **************\_\_\_\_**************
+- **Client** (if shareable): **************\_\_\_\_**************
 - **Brief description**:
   ```
   ________________________________
@@ -253,9 +277,10 @@ For each service you offer, please provide:
   - Client Name, Title
   ```
 
-*(Repeat for additional projects)*
+_(Repeat for additional projects)_
 
 ### Project Images
+
 - **Do you have high-quality project photos?**: [ ] Yes [ ] No
 - **Image format preference**: [ ] Professional photography [ ] iPhone photos [ ] Mixed
 - **Before/after photos available?**: [ ] Yes [ ] No
@@ -265,18 +290,22 @@ For each service you offer, please provide:
 ## 💼 **SECTION 6: TARGET AUDIENCE**
 
 ### Ideal Clients
+
 - **Primary client type**:
   - [ ] Homeowners [ ] Businesses [ ] Healthcare [ ] Hospitality
-  - [ ] Developers [ ] Architects [ ] Other: ________________________________
+  - [ ] Developers [ ] Architects [ ] Other: **************\_\_\_\_**************
 
 ### Demographics
-- **Geographic area served**: ________________________________
+
+- **Geographic area served**: **************\_\_\_\_**************
 - **Typical project budget range**:
   - [ ] Under $10K [ ] $10K-25K [ ] $25K-50K [ ] $50K-100K
   - [ ] $100K-250K [ ] $250K+ [ ] Varies significantly
 
 ### Client Pain Points
+
 **What problems do your clients typically face that you solve?**
+
 ```
 1. ________________________________
 2. ________________________________
@@ -288,38 +317,46 @@ For each service you offer, please provide:
 ## 📞 **SECTION 7: CONTACT & CONSULTATION**
 
 ### Business Hours
-- **Days of operation**: ________________________________
-- **Hours**: ________________________________
-- **Time zone**: ________________________________
+
+- **Days of operation**: **************\_\_\_\_**************
+- **Hours**: **************\_\_\_\_**************
+- **Time zone**: **************\_\_\_\_**************
 
 ### Consultation Process
+
 - **Do you offer free consultations?**: [ ] Yes [ ] No
-- **Consultation duration**: ________________________________
+- **Consultation duration**: **************\_\_\_\_**************
 - **Consultation format**: [ ] In-person [ ] Virtual [ ] Both
-- **Booking process**: ________________________________
+- **Booking process**: **************\_\_\_\_**************
 
 ### Project Process
-- **Typical project timeline**: ________________________________
-- **Payment structure**: ________________________________
-- **Service area radius**: ________________________________
+
+- **Typical project timeline**: **************\_\_\_\_**************
+- **Payment structure**: **************\_\_\_\_**************
+- **Service area radius**: **************\_\_\_\_**************
 
 ---
 
 ## 🎯 **SECTION 8: WEBSITE-SPECIFIC PREFERENCES**
 
 ### Current Homepage Content (to replace)
+
 **Current Hero Section:**
+
 - **Headline**: "Transform Your Space with Nature's Wisdom"
 - **Subheading**: "Biophilic Design That Heals & Inspires"
 - **Description**: "We create harmonious environments that reconnect you with nature, reduce stress, boost productivity, and enhance your overall well-being through scientifically-backed biophilic design principles."
 
 **Your Preferred Homepage Content:**
-- **Headline**: ________________________________
-- **Subheading**: ________________________________
-- **Description**: ________________________________
+
+- **Headline**: **************\_\_\_\_**************
+- **Subheading**: **************\_\_\_\_**************
+- **Description**: **************\_\_\_\_**************
 
 ### Content Priorities
+
 **Rank in order of importance (1-5):**
+
 - [ ] Portfolio showcase
 - [ ] Service descriptions
 - [ ] About/story content
@@ -327,6 +364,7 @@ For each service you offer, please provide:
 - [ ] Educational content/blog
 
 ### Functionality Needs
+
 - **Newsletter signup**: [ ] Yes [ ] No
 - **Blog/resources section**: [ ] Yes [ ] No
 - **Online booking**: [ ] Yes [ ] No
@@ -334,7 +372,9 @@ For each service you offer, please provide:
 - **Client portal**: [ ] Yes [ ] No
 
 ### Call-to-Action Preferences
+
 **What's your primary goal for website visitors?**
+
 - [ ] Schedule consultation
 - [ ] Request project quote
 - [ ] View portfolio
@@ -346,9 +386,10 @@ For each service you offer, please provide:
 ## 📧 **SECTION 9: TECHNICAL INTEGRATION**
 
 ### Email Marketing
+
 - **Email service provider** (if any):
   - [ ] Mailchimp [ ] Constant Contact [ ] ConvertKit
-  - [ ] Mailerlite [ ] Other: ________________________________
+  - [ ] Mailerlite [ ] Other: **************\_\_\_\_**************
 - **Newsletter topics of interest**:
   ```
   ________________________________
@@ -356,16 +397,19 @@ For each service you offer, please provide:
   ```
 
 ### Analytics & Tracking
+
 - **Google Analytics**: [ ] Yes [ ] No
 - **Facebook Pixel**: [ ] Yes [ ] No
-- **Other tracking needs**: ________________________________
+- **Other tracking needs**: **************\_\_\_\_**************
 
 ---
 
 ## 📝 **SECTION 10: CONTENT PREFERENCES**
 
 ### Tone & Voice
+
 **How should your brand sound?**
+
 - [ ] Professional & authoritative
 - [ ] Friendly & approachable
 - [ ] Educational & informative
@@ -373,7 +417,9 @@ For each service you offer, please provide:
 - [ ] Casual & conversational
 
 ### Key Messages
+
 **What are the top 3 messages you want visitors to understand?**
+
 ```
 1. ________________________________
 2. ________________________________
@@ -381,7 +427,9 @@ For each service you offer, please provide:
 ```
 
 ### Competitor Analysis
+
 **Who are your main competitors?** (websites for reference)
+
 ```
 1. ________________________________
 2. ________________________________
@@ -389,6 +437,7 @@ For each service you offer, please provide:
 ```
 
 **What do you like/dislike about their websites?**
+
 ```
 Like: ________________________________
 Dislike: ________________________________
@@ -399,14 +448,17 @@ Dislike: ________________________________
 ## 🚀 **SECTION 11: LAUNCH PREFERENCES**
 
 ### Timeline
-- **Desired launch date**: ________________________________
-- **Any specific deadlines**: ________________________________
+
+- **Desired launch date**: **************\_\_\_\_**************
+- **Any specific deadlines**: **************\_\_\_\_**************
 
 ### Domain & Hosting
-- **Preferred domain name**: ________________________________
-- **Current hosting provider** (if any): ________________________________
+
+- **Preferred domain name**: **************\_\_\_\_**************
+- **Current hosting provider** (if any): **************\_\_\_\_**************
 
 ### Post-Launch Support
+
 - **Content updates**: [ ] Self-managed [ ] Need assistance
 - **Technical maintenance**: [ ] Self-managed [ ] Need assistance
 
@@ -415,7 +467,9 @@ Dislike: ________________________________
 ## 📎 **SECTION 12: ADDITIONAL ASSETS**
 
 ### Files to Provide (Replacing Stock Images)
+
 **Current website uses Unsplash stock photos - please gather these items:**
+
 - [ ] **Company Logo** (PNG, SVG, AI files)
 - [ ] **Team Headshots** (professional photos for About page)
 - [ ] **High-resolution Project Photos** (3-5 photos per project)
@@ -430,7 +484,9 @@ Dislike: ________________________________
 - [ ] **Marketing materials** (brochures, business cards for reference)
 
 ### Additional Notes
+
 **Anything else you'd like us to know about your business or website preferences?**
+
 ```
 ________________________________
 ________________________________
@@ -455,8 +511,8 @@ Once this form is completed:
 
 ---
 
-**Form completed by**: ________________________________  
-**Date**: ________________________________  
-**Best contact method**: ________________________________
+**Form completed by**: **************\_\_\_\_**************  
+**Date**: **************\_\_\_\_**************  
+**Best contact method**: **************\_\_\_\_**************
 
 Thank you for taking the time to complete this comprehensive form. The more detail you provide, the better we can customize your website to perfectly represent your biophilic design business!

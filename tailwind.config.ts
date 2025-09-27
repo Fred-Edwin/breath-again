@@ -82,7 +82,7 @@ const config: Config = {
         '88': '22rem',
       },
       borderRadius: {
-        'xl': '1rem',
+        xl: '1rem',
         '2xl': '1.5rem',
       },
     },

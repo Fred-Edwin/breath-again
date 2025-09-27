@@ -4,13 +4,14 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ProjectCardProps } from '@/types/portfolio'
 import Link from 'next/link'
+import { EASING, createScaleVariants } from '../utils/animations'
 
 export default function ProjectCard({
   project,
   onClick,
   variant = 'masonry',
   showDetails = true,
-  className = ""
+  className = '',
 }: ProjectCardProps) {
   const handleClick = () => {
     if (onClick) {
@@ -18,36 +19,25 @@ export default function ProjectCard({
     }
   }
 
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 20,
-      scale: 0.95
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.25, 0.25, 0.75]
-      }
-    }
-  }
+  const cardVariants = createScaleVariants(0.6)
 
   const imageVariants = {
     hover: {
       scale: 1.05,
-      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] }
-    }
+      transition: {
+        type: 'tween' as const,
+        duration: 0.4,
+        ease: EASING.easeOut,
+      },
+    },
   }
 
   const overlayVariants = {
     initial: { opacity: 0 },
-    hover: { 
+    hover: {
       opacity: 1,
-      transition: { duration: 0.3 }
-    }
+      transition: { duration: 0.3 },
+    },
   }
 
   const getCategoryColor = (category: string) => {
@@ -56,7 +46,7 @@ export default function ProjectCard({
       commercial: 'bg-forest-500',
       hospitality: 'bg-moss-500',
       wellness: 'bg-earth-500',
-      landscape: 'bg-stone-500'
+      landscape: 'bg-stone-500',
     }
     return colors[category as keyof typeof colors] || 'bg-gray-500'
   }
@@ -64,10 +54,10 @@ export default function ProjectCard({
   const getCategoryLabel = (category: string) => {
     const labels = {
       residential: 'Residential',
-      commercial: 'Commercial', 
+      commercial: 'Commercial',
       hospitality: 'Hospitality',
       wellness: 'Wellness',
-      landscape: 'Landscape'
+      landscape: 'Landscape',
     }
     return labels[category as keyof typeof labels] || category
   }
@@ -92,12 +82,14 @@ export default function ProjectCard({
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute top-4 left-4">
-              <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getCategoryColor(project.category)}`}>
+              <span
+                className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getCategoryColor(project.category)}`}
+              >
                 {getCategoryLabel(project.category)}
               </span>
             </div>
           </div>
-          
+
           <div className="p-6 flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-serif font-bold text-forest-900 mb-2">
@@ -110,35 +102,70 @@ export default function ProjectCard({
                 {project.shortDescription}
               </p>
               <div className="flex items-center text-xs text-forest-500 mb-4">
-                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <svg
+                  className="w-4 h-4 mr-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
                 {project.location} • {project.year}
               </div>
             </div>
-            
+
             <div className="flex items-center justify-between">
               <div className="flex flex-wrap gap-1">
-                {project.tags.slice(0, 2).map(tag => (
-                  <span key={tag} className="px-2 py-1 bg-sage-50 text-forest-600 text-xs rounded">
+                {project.tags.slice(0, 2).map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 bg-sage-50 text-forest-600 text-xs rounded"
+                  >
                     {tag}
                   </span>
                 ))}
                 {project.tags.length > 2 && (
-                  <span className="text-xs text-forest-400">+{project.tags.length - 2}</span>
+                  <span className="text-xs text-forest-400">
+                    +{project.tags.length - 2}
+                  </span>
                 )}
               </div>
-              
+
               <div className="flex space-x-2">
                 <button
                   onClick={handleClick}
                   className="p-2 bg-sage-100 text-forest-700 rounded-lg hover:bg-sage-200 transition-colors"
                   aria-label="Quick view"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
                   </svg>
                 </button>
                 <Link
@@ -146,8 +173,18 @@ export default function ProjectCard({
                   className="p-2 bg-forest-700 text-sage-50 rounded-lg hover:bg-forest-800 transition-colors"
                   aria-label="View full project"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
                   </svg>
                 </Link>
               </div>
@@ -165,7 +202,7 @@ export default function ProjectCard({
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: '-50px' }}
       whileHover="hover"
     >
       {/* Project Image */}
@@ -180,7 +217,7 @@ export default function ProjectCard({
             loading="lazy"
           />
         </motion.div>
-        
+
         {/* Overlay */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/20"
@@ -190,7 +227,9 @@ export default function ProjectCard({
 
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getCategoryColor(project.category)}`}>
+          <span
+            className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getCategoryColor(project.category)}`}
+          >
             {getCategoryLabel(project.category)}
           </span>
         </div>
@@ -217,12 +256,27 @@ export default function ProjectCard({
               whileTap={{ scale: 0.9 }}
               aria-label="Quick view project"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
               </svg>
             </motion.button>
-            
+
             <Link href={project.href}>
               <motion.div
                 className="p-3 bg-forest-700 text-sage-50 rounded-full hover:bg-forest-800 transition-all duration-200 shadow-lg"
@@ -230,8 +284,18 @@ export default function ProjectCard({
                 whileTap={{ scale: 0.9 }}
                 aria-label="View full project"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
               </motion.div>
             </Link>
@@ -245,11 +309,11 @@ export default function ProjectCard({
           <h3 className="text-lg font-serif font-bold text-forest-900 mb-2 group-hover:text-forest-700 transition-colors">
             {project.title}
           </h3>
-          
+
           <p className="text-sm text-forest-600 mb-3 font-medium">
             {project.subtitle}
           </p>
-          
+
           <p className="text-forest-600 text-sm leading-relaxed mb-4">
             {project.shortDescription}
           </p>
@@ -257,9 +321,24 @@ export default function ProjectCard({
           {/* Meta Info */}
           <div className="flex items-center justify-between text-xs text-forest-500 mb-4">
             <div className="flex items-center">
-              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              <svg
+                className="w-4 h-4 mr-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
               </svg>
               {project.location}
             </div>
@@ -268,8 +347,11 @@ export default function ProjectCard({
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1">
-            {project.tags.slice(0, 3).map(tag => (
-              <span key={tag} className="px-2 py-1 bg-sage-50 text-forest-600 text-xs rounded transition-colors hover:bg-sage-100">
+            {project.tags.slice(0, 3).map((tag) => (
+              <span
+                key={tag}
+                className="px-2 py-1 bg-sage-50 text-forest-600 text-xs rounded transition-colors hover:bg-sage-100"
+              >
                 {tag}
               </span>
             ))}

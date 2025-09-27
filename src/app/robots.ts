@@ -14,27 +14,27 @@ export default function robots(): MetadataRoute.Robots {
           '/_next/',
           '/private/',
           '/*.json$',
-          '/animations-demo' // Optional: hide demo page from search engines
-        ]
+          '/animations-demo', // Optional: hide demo page from search engines
+        ],
       },
       {
         userAgent: 'GPTBot',
-        disallow: '/'
+        disallow: '/',
       },
       {
         userAgent: 'ChatGPT-User',
-        disallow: '/'
+        disallow: '/',
       },
       {
         userAgent: 'CCBot',
-        disallow: '/'
+        disallow: '/',
       },
       {
         userAgent: 'anthropic-ai',
-        disallow: '/'
-      }
+        disallow: '/',
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl
+    host: baseUrl,
   }
 }

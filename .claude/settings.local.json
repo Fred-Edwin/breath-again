@@ -15,7 +15,11 @@
       "Bash(git init:*)",
       "Bash(git commit:*)",
       "Bash(git remote add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Read(//d//**)",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run format:*)"
     ],
     "deny": [],
     "ask": []

@@ -12,9 +12,9 @@ export default function Portfolio() {
   const [filterState, setFilterState] = useState<PortfolioFilterState>({
     category: 'all',
     searchTerm: '',
-    tags: []
+    tags: [],
   })
-  
+
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -36,9 +36,9 @@ export default function Portfolio() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   }
 
   const itemVariants = {
@@ -48,9 +48,9 @@ export default function Portfolio() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.8, 0.25, 1] as [number, number, number, number]
-      }
-    }
+        ease: [0.25, 0.8, 0.25, 1] as [number, number, number, number],
+      },
+    },
   }
 
   return (
@@ -62,7 +62,7 @@ export default function Portfolio() {
           <div className="absolute bottom-20 right-16 w-48 h-48 bg-sage-300 rounded-full blur-2xl" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-moss-200 rounded-full blur-3xl" />
         </div>
-        
+
         <motion.div
           className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
           variants={containerVariants}
@@ -81,7 +81,8 @@ export default function Portfolio() {
               className="text-xl md:text-2xl text-forest-700 leading-relaxed max-w-3xl mx-auto mb-8"
               variants={itemVariants}
             >
-              Explore our biophilic design capabilities and discover how we can transform your space with nature-inspired solutions
+              Explore our biophilic design capabilities and discover how we can
+              transform your space with nature-inspired solutions
             </motion.p>
 
             <motion.div
@@ -151,7 +152,8 @@ export default function Portfolio() {
               Featured Capabilities
             </h2>
             <p className="text-lg text-forest-600 max-w-2xl mx-auto">
-              Discover our design expertise and how we bring nature into urban spaces
+              Discover our design expertise and how we bring nature into urban
+              spaces
             </p>
           </motion.div>
 
@@ -163,7 +165,7 @@ export default function Portfolio() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {portfolioProjects
-              .filter(project => project.featured)
+              .filter((project) => project.featured)
               .slice(0, 3)
               .map((project, index) => (
                 <motion.div
@@ -194,25 +196,29 @@ export default function Portfolio() {
                         </span>
                       </div>
                     </div>
-                    
+
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-sm font-medium text-sage-600 bg-sage-100 px-3 py-1 rounded-full">
-                          {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+                          {project.category.charAt(0).toUpperCase() +
+                            project.category.slice(1)}
                         </span>
                       </div>
-                      
+
                       <h3 className="text-xl font-serif font-bold text-forest-900 mb-3 group-hover:text-forest-700 transition-colors">
                         {project.title}
                       </h3>
-                      
+
                       <p className="text-forest-600 mb-4 leading-relaxed text-sm">
                         {project.shortDescription}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-1">
                         {project.tags.slice(0, 3).map((tag, tagIndex) => (
-                          <span key={tagIndex} className="text-xs text-forest-700 bg-forest-50 px-2 py-1 rounded">
+                          <span
+                            key={tagIndex}
+                            className="text-xs text-forest-700 bg-forest-50 px-2 py-1 rounded"
+                          >
                             {tag}
                           </span>
                         ))}
@@ -239,16 +245,33 @@ export default function Portfolio() {
               Our Capabilities
             </h2>
             <p className="text-lg text-forest-600 max-w-2xl mx-auto">
-              Metrics that reflect our expertise in creating healthier, nature-connected spaces
+              Metrics that reflect our expertise in creating healthier,
+              nature-connected spaces
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { number: "3", label: "Service Categories", description: "Comprehensive biophilic design solutions" },
-              { number: "100%", label: "Nature Integration", description: "Every design connects you with nature" },
-              { number: "40%", label: "Air Quality Improvement", description: "Plants naturally purify indoor environments" },
-              { number: "25%", label: "Wellness Enhancement", description: "Nature exposure boosts mental well-being" }
+              {
+                number: '3',
+                label: 'Service Categories',
+                description: 'Comprehensive biophilic design solutions',
+              },
+              {
+                number: '100%',
+                label: 'Nature Integration',
+                description: 'Every design connects you with nature',
+              },
+              {
+                number: '40%',
+                label: 'Air Quality Improvement',
+                description: 'Plants naturally purify indoor environments',
+              },
+              {
+                number: '25%',
+                label: 'Wellness Enhancement',
+                description: 'Nature exposure boosts mental well-being',
+              },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -261,8 +284,12 @@ export default function Portfolio() {
                 <div className="text-4xl md:text-5xl font-bold text-forest-700 mb-2 group-hover:text-forest-800 transition-colors">
                   {stat.number}
                 </div>
-                <div className="text-xl font-semibold text-forest-900 mb-2">{stat.label}</div>
-                <div className="text-forest-600 text-sm leading-relaxed">{stat.description}</div>
+                <div className="text-xl font-semibold text-forest-900 mb-2">
+                  {stat.label}
+                </div>
+                <div className="text-forest-600 text-sm leading-relaxed">
+                  {stat.description}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -282,7 +309,8 @@ export default function Portfolio() {
               Ready to Create Your Own Transformation?
             </h2>
             <p className="text-lg text-sage-200 mb-8 max-w-2xl mx-auto">
-              Let's work together to design a space that reflects your values and enhances your daily life
+              Let&apos;s work together to design a space that reflects your
+              values and enhances your daily life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

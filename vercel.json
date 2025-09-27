@@ -10,7 +10,7 @@
       "destination": "/api/sitemap"
     },
     {
-      "source": "/robots.txt", 
+      "source": "/robots.txt",
       "destination": "/api/robots"
     }
   ],

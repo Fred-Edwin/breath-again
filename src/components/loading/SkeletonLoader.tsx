@@ -16,27 +16,31 @@ export default function SkeletonLoader({
   variant = 'rectangular',
   width = '100%',
   height = '1rem',
-  lines = 1
+  lines = 1,
 }: SkeletonLoaderProps) {
   const prefersReducedMotion = useReducedMotion()
 
-  const baseClasses = "bg-gradient-to-r from-sage-200 via-sage-100 to-sage-200 dark:from-forest-800 dark:via-forest-700 dark:to-forest-800"
-  
+  const baseClasses =
+    'bg-gradient-to-r from-sage-200 via-sage-100 to-sage-200 dark:from-forest-800 dark:via-forest-700 dark:to-forest-800'
+
   const variantClasses = {
     text: 'rounded-sm',
     avatar: 'rounded-full',
     rectangular: 'rounded-md',
-    circular: 'rounded-full'
+    circular: 'rounded-full',
   }
 
-  const pulseAnimation = prefersReducedMotion ? {} : {
-    backgroundPosition: ['200% 0', '-200% 0'],
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-      ease: 'linear'
-    }
-  }
+  const pulseAnimation = prefersReducedMotion
+    ? {}
+    : {
+        backgroundPosition: ['200% 0', '-200% 0'],
+        transition: {
+          duration: 2,
+          repeat: Infinity,
+          type: 'tween' as const,
+          ease: [0, 0, 1, 1] as [number, number, number, number], // linear easing
+        },
+      }
 
   if (variant === 'text' && lines > 1) {
     return (
@@ -48,7 +52,7 @@ export default function SkeletonLoader({
             style={{
               width: index === lines - 1 ? '75%' : width,
               height: height,
-              backgroundSize: '400% 100%'
+              backgroundSize: '400% 100%',
             }}
             animate={pulseAnimation}
           />
@@ -63,7 +67,7 @@ export default function SkeletonLoader({
       style={{
         width,
         height,
-        backgroundSize: '400% 100%'
+        backgroundSize: '400% 100%',
       }}
       animate={pulseAnimation}
     />
@@ -122,9 +126,14 @@ export function PageSkeleton() {
         {/* Header skeleton */}
         <div className="text-center space-y-4">
           <SkeletonLoader variant="text" width="60%" height="3rem" />
-          <SkeletonLoader variant="text" lines={2} height="1.25rem" width="80%" />
+          <SkeletonLoader
+            variant="text"
+            lines={2}
+            height="1.25rem"
+            width="80%"
+          />
         </div>
-        
+
         {/* Content grid skeleton */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Array.from({ length: 6 }, (_, index) => (

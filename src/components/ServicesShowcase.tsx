@@ -4,47 +4,55 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ServicesShowcaseProps, ServiceCardProps } from '@/types/services'
 import { servicesData } from '@/data/services'
+import {
+  EASING,
+  TRANSITIONS,
+  createStaggerContainer,
+  createFadeUpVariants,
+} from '../utils/animations'
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ 
-  service, 
-  index = 0, 
-  variant = 'default',
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  service,
+  index = 0,
   showDescription = true,
-  className = ""
+  className = '',
 }) => {
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 30,
-      scale: 0.95
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
+        ...TRANSITIONS.medium,
         delay: index * 0.1,
-        ease: [0.25, 0.25, 0.25, 0.75]
-      }
-    }
+      },
+    },
   }
 
   const iconVariants = {
     initial: { scale: 1, rotate: 0 },
-    hover: { 
-      scale: 1.1, 
+    hover: {
+      scale: 1.1,
       rotate: 5,
-      transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
-    }
+      transition: { ...TRANSITIONS.fast },
+    },
   }
 
   const backgroundVariants = {
     initial: { scale: 1 },
-    hover: { 
+    hover: {
       scale: 1.05,
-      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] }
-    }
+      transition: {
+        type: 'tween' as const,
+        duration: 0.4,
+        ease: EASING.easeOut,
+      },
+    },
   }
 
   return (
@@ -53,7 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: '-50px' }}
       whileHover="hover"
     >
       <motion.div
@@ -110,7 +118,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </motion.svg>
             </Link>
           </motion.div>
@@ -120,12 +133,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             className="absolute top-6 right-6 w-20 h-20 rounded-full bg-gradient-to-br from-sage-100 to-moss-100 opacity-20 group-hover:opacity-40 transition-opacity duration-500"
             animate={{
               scale: [1, 1.05, 1],
-              rotate: [0, 5, 0]
+              rotate: [0, 5, 0],
             }}
             transition={{
               duration: 4,
               repeat: Infinity,
-              ease: [0.4, 0, 0.2, 1]
+              ease: EASING.easeInOut,
             }}
           />
         </div>
@@ -135,40 +148,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }
 
 export default function ServicesShowcase({
-  title = "Our Services",
-  subtitle = "Comprehensive biophilic design solutions tailored to your unique needs",
-  services = servicesData.filter(service => service.featured),
+  title = 'Our Services',
+  subtitle = 'Comprehensive biophilic design solutions tailored to your unique needs',
+  services = servicesData.filter((service) => service.featured),
   showAllLink = true,
   maxDisplayed = 3,
-  className = ""
+  className = '',
 }: ServicesShowcaseProps) {
   const displayedServices = services.slice(0, maxDisplayed)
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  }
+  const containerVariants = createStaggerContainer(0.1)
 
-  const titleVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0, 0, 0.2, 1]
-      }
-    }
-  }
+  const titleVariants = createFadeUpVariants(0.6)
 
   return (
-    <section className={`py-20 bg-gradient-to-br from-sage-25 to-white ${className}`}>
+    <section
+      className={`py-20 bg-gradient-to-br from-sage-25 to-white ${className}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -176,7 +172,7 @@ export default function ServicesShowcase({
           variants={titleVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-forest-900 mb-6">
             {title}
@@ -192,7 +188,7 @@ export default function ServicesShowcase({
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           {displayedServices.map((service, index) => (
             <ServiceCard
@@ -218,8 +214,18 @@ export default function ServicesShowcase({
               className="inline-flex items-center bg-forest-700 text-sage-50 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-forest-800 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
             >
               View All Services
-              <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg
+                className="ml-3 w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </svg>
             </Link>
           </motion.div>
