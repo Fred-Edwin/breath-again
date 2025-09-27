@@ -5,8 +5,11 @@ import { useState } from 'react'
 import { portfolioProjects, getCategoryStats } from '@/data/portfolio'
 import { PortfolioFilterState, Project } from '@/types/portfolio'
 import PortfolioFilters from '@/components/PortfolioFilters'
-import PortfolioGrid from '@/components/PortfolioGrid'
-import ProjectModal from '@/components/ProjectModal'
+import {
+  LazyPortfolioGrid,
+  LazyProjectModal,
+} from '@/components/LazyComponentWrapper'
+import LazyComponentWrapper from '@/components/LazyComponentWrapper'
 
 export default function Portfolio() {
   const [filterState, setFilterState] = useState<PortfolioFilterState>({
@@ -128,11 +131,13 @@ export default function Portfolio() {
 
             {/* Portfolio Grid */}
             <div className="lg:col-span-3">
-              <PortfolioGrid
-                projects={portfolioProjects}
-                filterState={filterState}
-                onProjectClick={handleProjectClick}
-              />
+              <LazyComponentWrapper>
+                <LazyPortfolioGrid
+                  projects={portfolioProjects}
+                  filterState={filterState}
+                  onProjectClick={handleProjectClick}
+                />
+              </LazyComponentWrapper>
             </div>
           </motion.div>
         </div>
@@ -335,11 +340,15 @@ export default function Portfolio() {
       </section>
 
       {/* Project Modal */}
-      <ProjectModal
-        project={selectedProject}
-        isOpen={isModalOpen}
-        onClose={handleModalClose}
-      />
+      {isModalOpen && (
+        <LazyComponentWrapper>
+          <LazyProjectModal
+            project={selectedProject}
+            isOpen={isModalOpen}
+            onClose={handleModalClose}
+          />
+        </LazyComponentWrapper>
+      )}
     </div>
   )
 }
