@@ -48,12 +48,12 @@ export default function LoadingSpinner({
             <motion.div
               className="absolute inset-0 border-2 border-current border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
             />
             <motion.div
               className="absolute inset-1 border border-current border-b-transparent rounded-full"
               animate={{ rotate: -360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{ duration: 2, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
             />
           </div>
         )
@@ -74,7 +74,7 @@ export default function LoadingSpinner({
                   duration: 1.2,
                   repeat: Infinity,
                   delay: i * 0.2,
-                  ease: 'easeInOut'
+                  ease: [0.4, 0, 0.2, 1]
                 }}
               />
             ))}
@@ -96,7 +96,7 @@ export default function LoadingSpinner({
                   duration: 1,
                   repeat: Infinity,
                   delay: i * 0.1,
-                  ease: 'easeInOut'
+                  ease: [0.4, 0, 0.2, 1]
                 }}
               />
             ))}

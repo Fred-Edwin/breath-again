@@ -183,7 +183,7 @@ export function FloatingElement({
       transition={{
         duration,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: [0.4, 0, 0.2, 1],
         delay
       }}
     >
@@ -220,7 +220,7 @@ export function PulseElement({
       transition={{
         duration,
         repeat: Infinity,
-        ease: 'easeInOut'
+        ease: [0.4, 0, 0.2, 1]
       }}
     >
       {children}

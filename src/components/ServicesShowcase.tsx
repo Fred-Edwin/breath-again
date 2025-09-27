@@ -35,7 +35,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     hover: { 
       scale: 1.1, 
       rotate: 5,
-      transition: { duration: 0.3, ease: "easeInOut" }
+      transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
     }
   }
 
@@ -43,7 +43,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     initial: { scale: 1 },
     hover: { 
       scale: 1.05,
-      transition: { duration: 0.4, ease: "easeOut" }
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] }
     }
   }
 
@@ -125,7 +125,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             transition={{
               duration: 4,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: [0.4, 0, 0.2, 1]
             }}
           />
         </div>
@@ -162,7 +162,7 @@ export default function ServicesShowcase({
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0, 0, 0.2, 1]
       }
     }
   }

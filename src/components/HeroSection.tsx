@@ -63,7 +63,7 @@ const FloatingElement: React.FC<{
         duration,
         repeat: Infinity,
         delay,
-        ease: "easeInOut"
+        ease: [0.4, 0, 0.2, 1]
       }}
     >
       {children}
@@ -173,14 +173,14 @@ export default function HeroSection({ content = defaultContent, className = "" }
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0, 0, 0.2, 1]
       }
     },
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
+        ease: [0.4, 0, 0.2, 1]
       }
     },
     tap: {

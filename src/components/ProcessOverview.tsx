@@ -33,7 +33,7 @@ export default function ProcessOverview({
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0, 0, 0.2, 1]
       }
     }
   }
@@ -45,7 +45,7 @@ export default function ProcessOverview({
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0, 0, 0.2, 1]
       }
     }
   }
@@ -57,7 +57,7 @@ export default function ProcessOverview({
       transition: {
         duration: 0.8,
         delay: 0.5,
-        ease: "easeInOut"
+        ease: [0.4, 0, 0.2, 1]
       }
     }
   }
@@ -150,7 +150,7 @@ export default function ProcessOverview({
                       duration: 3,
                       repeat: Infinity,
                       delay: index * 0.5,
-                      ease: "easeInOut"
+                      ease: [0.4, 0, 0.2, 1]
                     }}
                   />
                 </div>

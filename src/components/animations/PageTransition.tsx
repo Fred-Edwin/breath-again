@@ -34,7 +34,7 @@ export default function PageTransition({ children }: PageTransitionProps) {
 
   const pageTransition = {
     type: 'tween',
-    ease: 'anticipate',
+    ease: [0.25, 0.46, 0.45, 0.94],
     duration: animationConfig.enabled ? 0.4 : 0.01
   }
 
@@ -113,7 +113,7 @@ export function SectionTransition({
       transition={{
         duration: animationConfig.enabled ? 0.6 : 0.01,
         delay: animationConfig.enabled ? delay : 0,
-        ease: 'easeOut'
+        ease: [0, 0, 0.2, 1]
       }}
     >
       {children}
@@ -160,7 +160,7 @@ export function SlideTransition({
       transition={{
         duration: animationConfig.enabled ? duration : 0.01,
         delay: animationConfig.enabled ? delay : 0,
-        ease: 'easeOut'
+        ease: [0, 0, 0.2, 1]
       }}
     >
       {children}

@@ -38,7 +38,7 @@ export default function ProjectCard({
   const imageVariants = {
     hover: {
       scale: 1.05,
-      transition: { duration: 0.4, ease: "easeOut" }
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] }
     }
   }
 

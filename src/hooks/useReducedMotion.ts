@@ -36,7 +36,7 @@ export function useAnimationConfig() {
     transition: {
       type: 'tween',
       duration: prefersReducedMotion ? 0.01 : 0.6,
-      ease: 'easeOut'
+      ease: [0, 0, 0.2, 1]
     }
   }
 }

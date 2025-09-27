@@ -73,7 +73,7 @@ export default function EnhancedHeroSection({
       y: 0,
       transition: {
         duration: animationConfig.enabled ? 0.8 : 0.01,
-        ease: "easeOut"
+        ease: [0, 0, 0.2, 1]
       }
     }
   }
@@ -180,7 +180,7 @@ export default function EnhancedHeroSection({
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: [0.4, 0, 0.2, 1]
               }}
             >
               <motion.div
@@ -192,7 +192,7 @@ export default function EnhancedHeroSection({
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: [0.4, 0, 0.2, 1]
                 }}
               />
             </motion.div>

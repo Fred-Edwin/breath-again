@@ -28,7 +28,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0, 0, 0.2, 1]
       }
     }
   }
@@ -41,7 +41,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
       transition: {
         delay: index * 0.1,
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0, 0, 0.2, 1]
       }
     })
   }
